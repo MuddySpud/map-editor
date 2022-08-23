@@ -1,0 +1,110 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#projectView {
+
+    .subtree-table {
+        padding: 0 0 0 10px;
+        position: relative;
+    }
+
+    .subtree-project {
+        position: relative;
+        padding: 3px 0 0 0;
+    }
+
+    .subtree-project::before {
+        width: 29px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+        top: 16px;
+        height: 2px;
+        content: "";
+        position: absolute;
+        left: 85px;
+    }
+
+    .subtree-project::after {
+        border-left: 1px solid rgba(255, 255, 255, 0.5);
+        height: 100%;
+        width: 2px;
+        top: 0px;
+        content: "";
+        position: absolute;
+        left: 85px;
+    }
+
+    .subtree-project-expand {
+        width: 20px;
+        height: 15px;
+        position: absolute;
+        left: -2px;
+        top: 9px;
+        float: left;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        background-image: $svg-expandable;
+        cursor: pointer;
+        display: block;
+        background-color: transparent;
+    }
+
+    .subtree-project.expanded>.subtree-project-expand {
+        background-image: none;
+    }
+
+
+    .subtree-project-expand.subtree-project-hovered,
+    .subtree-project-expand:hover,
+    .subtree-project.expanded>.subtree-project-expand.subtree-project-hovered,
+    .subtree-project.expanded>.subtree-project-expand:hover {
+        background-image: $svg-expand-down;
+        display: block;
+    }
+
+    .subtree-project.expanded>.subtree-project-expand.subtree-project-hovered,
+    .subtree-project.expanded>.subtree-project-expand:hover {
+        background-image: $svg-expand-up;
+    }
+
+    .root-project>.project-children {
+        padding-left: 0;
+        margin: 0 0 0 68px;
+    }
+
+    .subtree-project:last-child::after {
+        height: 16px;
+    }
+
+    .open-subtree {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+        height: 20px;
+        width: 20px;
+        position: absolute;
+        left: 23px;
+        top: 7px;
+        cursor: pointer;
+    }
+
+    .subtree-project>a:hover .open-subtree {
+        background-image: url("../../../../images/newTabGhost.svg");
+        // background-image: url("../../../../../images/newTabGhost2.svg");
+        background-image: url("../../../../images/newTabGhost3.svg");
+        // background-image: url("../../../../../images/newTabGhost3Dark.svg");
+        opacity: 0.75;
+    }
+
+    .subtree-project>a:hover .open-subtree:hover {
+        background-image: $svg-new-tab;
+        opacity: 1;
+    }
+
+    .subtree-project>a:hover .open-subtree:active {
+        background-image: $svg-new-tab-active;
+    }
+
+
+}

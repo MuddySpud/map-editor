@@ -1,0 +1,49 @@
+@import '../../../../../../../../node_modules/codemirror/lib/codemirror.css'; // Editor's Dependency Style
+@import '../../../../../../../../node_modules/@toast-ui/editor/dist/toastui-editor.css'; // Editor's Style@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#markdownJsonView {
+
+    .discussion-input:first-of-type {
+        margin-top: 22px;
+    }
+
+    .title-table .title-row .title-cell .error {
+        white-space: pre-wrap;
+    }
+
+    textarea {
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        min-height: 1.88rem;
+        max-height: 800px;
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        height: 1rem;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        resize: none;
+        display: block;
+    }
+
+    textarea::placeholder,
+    input::placeholder {
+        font-style: italic;
+        color: $lens-text-soft;
+    }
+
+    textarea {
+        border-color: $node-green;
+        color: $lens-text-hard;
+        background-color: $node-green;
+    }
+
+    .discussion-input .textarea-wrapper {
+        margin-bottom: 10px;
+    }
+}

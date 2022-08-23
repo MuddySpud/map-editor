@@ -1,0 +1,41 @@
+
+const Filters = {
+
+    treeNameFocusFilter: '#lensView .name input',
+    aliasTitleFocusFilter: '#lensView .title input',
+    subtreeNameFocusFilter: '#lensView .name input',
+    branchOptionKeyFocusFilter: '#lensView .key input',
+    branchLimitKeyFocusFilter: '#lensView .key input',
+    branchTargetKeyFocusFilter: '#lensView .key input',
+    bookmarkNavKeyFocusFilter: '#lensView .option .bookmark-key',
+    treesAdvancedFocusFilter: '#filterLens .search-row textarea',
+    treesAutoFocusFilter: '#filterLens .filter-text input',
+    stRootTextFocusFilter: '#treeLens #subtreeLens .i-stRoot input',
+    discussionFocusFilter: '#nodeLensView .discussion textarea',
+    nodeControlFocusFilter: '#branchesView #controlMenu',
+    infoControlFocusFilter: '#branchesView #infoMenu',
+    mapSocketsSelectFilter: '#mapSocketLensView .select-host>.drop-down',
+    part_socketsSelectFilter: ' .select-host>.drop-down',
+    part_socketsSelectChangeButtonFilter: ' .select-host>.change-button',
+    optionExpandActiveFilter: '#branchesView .option-expand:active',
+    optionActionsActiveFilter: '#branchesView .option-actions:active',
+    nodeActiveFilter: '#branchesView .node>a:active',
+    nodeMenuActiveFilter: '#branchesView .option.node-menu:active',
+    optionShowFilter: '#branchesView .option .scroll-show',
+    nodeShowFilter: '#branchesView .node .scroll-show',
+    treeShowFilter: '#treesView .tree-row.scroll-show',
+    botShowFilter: '#botsView .bot-row.scroll-show',
+    nodeShowClassFilter: 'scroll-show',
+    treeShowClassFilter: 'scroll-show',
+    botShowClassFilter: 'scroll-show',
+    lightBoxFilter: '#lightBox',
+    lightBoxViewFilter: '#lightBox .view',
+    lightBoxErrorTextFilter: '#lightBox .error .text',
+    lightBoxErrorFilter: '#lightBox .error',
+    mdEditorFilter: '#mdEditor',
+    mdEditorViewFilter: '#mdEditorView .view',
+    pluginSelectFilter: '#nodeLensView .plugin-select .drop-down',
+}
+
+export default Filters;
+

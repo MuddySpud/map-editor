@@ -1,0 +1,85 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#viewSettingsView {
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    .title {
+        padding: 5px 5px 20px 5px;
+        color: $node-green;
+        font-size: 0.9em;
+    }
+
+    .main button {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 0.7em;
+        color: white;
+        font-weight: 500;
+        margin: 10px 20px 0 0;
+        outline: none;
+    }
+
+    .main button:hover {
+        border-color: cyan;
+    }
+
+    .main button:active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .yep,
+    .main button:active .yep {
+        background-image: $svg-tick;
+    }
+
+    .nope,
+    .main button:active .nope {
+        background-image: $svg-cross;
+    }
+
+    .yep,
+    .nope {
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 10px;
+        margin-top: 1px;
+        float: left;
+    }
+
+    .nope {
+        height: 9px;
+        margin-top: 2px;
+    }
+
+    .icons .views-icon {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: 7px;
+        background-image: url("../../../../../images/viewsHighlight.svg");
+        background-image: url("../../../../../images/viewsHighlight2.svg");
+        background-image: url("../../../../../images/viewsHighlight3.svg");
+    }
+
+
+
+
+
+}
+
+
+.hidden {
+    display: none;
+}

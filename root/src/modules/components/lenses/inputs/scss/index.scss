@@ -1,0 +1,27 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#inputsView {
+    margin-top: 20px;
+
+    .textarea-wrapper {
+
+        textarea {
+            border-color: $node-green;
+            color: $lens-text-hard;
+            background-color: $node-green;
+
+            &::placeholder {
+                font-style: italic;
+                color: $lens-text-soft;
+            }
+
+            &:hover,
+            &:focus {
+                border-color: $discussion-border-highlight;
+                outline: none;
+            }
+        }
+    }
+}

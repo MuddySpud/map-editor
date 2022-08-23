@@ -1,0 +1,13 @@
+@import '../../init/scss/_settings';
+
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    background-image: $background-gradient;
+    z-index: -1000;
+}

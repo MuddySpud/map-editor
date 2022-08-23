@@ -1,0 +1,10 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#branchesCoreView {
+
+    #core.filter {
+        filter: blur(2px);
+    }
+}

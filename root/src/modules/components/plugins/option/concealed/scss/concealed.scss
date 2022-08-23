@@ -1,0 +1,21 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#nodeLensView {
+    
+    .option-plugin {
+
+        .concealed-comment {
+            margin: 10px 0 10px 0;
+        }
+
+        .concealed-script {
+            margin-top: 3px;
+        }
+    }
+
+    .option-buttons.concealed-option {
+        top: -6px;
+    }
+}

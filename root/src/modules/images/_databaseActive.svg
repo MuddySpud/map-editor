@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+ <g transform="translate(0,-16)" fill="none" stroke="#0ff" stroke-width="25">
+  <path d="m95.143 328.12-0.25391 117.76c4e-6 21.172 67.747 38.336 151.32 38.336 83.569 0 151.31-17.164 151.31-38.336v-116.24" style="paint-order:stroke markers fill"/>
+  <ellipse cx="246.2" cy="89.88" rx="151.32" ry="38.335" style="paint-order:stroke markers fill"/>
+  <path d="m95.143 206.12-0.25391 117.76c4e-6 21.172 67.747 38.336 151.32 38.336 83.569 0 151.31-17.164 151.31-38.336v-116.24" style="paint-order:stroke markers fill"/>
+  <path d="m95.143 88.12-0.25391 117.76c4e-6 21.172 67.747 38.336 151.32 38.336 83.569 0 151.31-17.164 151.31-38.336v-116.24" style="paint-order:stroke markers fill"/>
+ </g>
+</svg>

@@ -1,0 +1,228 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#lensOverlay {
+    position: absolute;
+    z-index: 100000;
+    top: 24px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 2px;
+
+    .overlay-back {
+        background-color: $select-yellow-alpha;
+        background-image: linear-gradient(45deg, hsla(84, 42%, 30%, 1), hsl(91, 98%, 51%), hsl(67, 96%, 30%));
+        opacity: 0.9;
+        height: 100%;
+        width: 100%;
+        border-radius: 2px;
+    }
+
+    .dialogue {
+        width: 500px;
+        background-color: $background-white;
+        border-radius: 6px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .controls-header {
+
+            .close {
+                background-image: $svg-close-negative;
+                width: 15px;
+                height: 15px;
+                opacity: 0.2;
+                margin: 1px 6px 0 0;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:active {
+                    background-image: $svg-close-active;
+                }
+            }
+        }
+
+        .header {
+            margin: 0 auto;
+            padding: 0;
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                margin: 0;
+                display: block;
+                border: 1px solid rgb(0, 205, 0);
+                border-radius: 40px;
+                padding: 0;
+            }
+        }
+
+        .title {
+            color: #000;
+            padding: 15px 0 25px 0;
+            font-size: 25px;
+            text-align: center;
+            letter-spacing: -0.035em;
+            font-weight: 400;
+            margin: 10px 0 0 0;
+            display: block;
+        }
+
+        button {
+            display: block;
+            padding: 0.25em 45px 0.25em 45px;
+            box-sizing: border-box;
+            text-decoration: none;
+            line-height: 2rem;
+            font-weight: 400;
+            font-size: 13.6px;
+            cursor: pointer;
+            margin: 0 auto;
+            border-radius: 1.5rem;
+            background: white;
+            outline: none;
+            border: 1px solid #c8c8c8;
+            color: black;
+
+            .yep {
+                background-image: $svg-tick-negative;
+            }
+
+            .nope {
+                background-image: $svg-cross-negative;
+            }
+
+            .yep,
+            .nope {
+                background-repeat: no-repeat;
+                width: 15px;
+                height: 15px;
+                margin: 8px 0 0 -30px;
+                float: left;
+                position: absolute;
+                opacity: 0.2;
+            }
+
+            .nope {
+                height: 12px;
+                margin-top: 10px;
+            }
+
+            &:hover {
+                background-color: #00cccc;
+                border-color: #00cccc;
+                font-weight: 500;
+                color: $background-white;
+
+                .nope {
+                    background-image: $svg-cross;
+                    opacity: 0.5;
+                }
+
+                .yep {
+                    background-image: $svg-tick;
+                    opacity: 0.5;
+                }
+            }
+
+            &:active {
+                background-color: #00b4b4;
+                border-color: #00b4b4;
+            }
+        }
+    }
+
+    &.overlay-target {
+
+        .overlay-back {
+            background-color: $select-yellow-alpha;
+            background-image: linear-gradient(45deg, hsl(84, 42%, 30%), hsl(91, 98%, 51%), hsl(67, 96%, 30%));
+            background-image: linear-gradient(45deg, #542c6d, #fd08bd, #640396);
+            background-image: linear-gradient(45deg, #5a2c6d, #d75fff, #6b0396);
+            background-image: linear-gradient(45deg, #581b71, #b882ff, #710186);
+            opacity: 0.9;
+        }
+
+        .dialogue {
+
+            .header {
+
+                .icon {
+                    background-image: url("../../../../../images/finger2.svg");
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &.overlay-option {
+
+        .overlay-back {
+            background-color: #882c02;
+            background-image: linear-gradient(45deg, #6d452c, #ffb402, #8e3912);            opacity: 0.9;
+        }
+
+        .dialogue {
+
+            .header {
+
+                .icon {
+                    background-image: url("../../../../../images/finger2.svg");
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &.overlay-limit {
+
+        .overlay-back {
+            background-color: $select-yellow-alpha;
+            background-image: linear-gradient(45deg, hsla(84, 42%, 30%, 1), hsl(91, 98%, 51%), hsl(67, 96%, 30%));
+            opacity: 0.9;
+        }
+
+        .dialogue {
+
+            .header {
+
+                .icon {
+                    background-image: url("../../../../../images/finger2.svg");
+                    background-size: 40px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &.overlay-stash {
+        background-color: $select-yellow-alpha;
+        color: #007ca1;
+
+        button {
+            border: 1px solid #007ca1;
+            color: #007ca1;
+
+            &:hover {
+                background-color: #007ca1;
+                color: $background-white;
+            }
+
+            &:active {
+                background-color: #004458;
+            }
+        }
+    }
+}

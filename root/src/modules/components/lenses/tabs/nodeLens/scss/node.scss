@@ -1,0 +1,355 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#nodeLensView {
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    .stash-edit h3 {
+        margin: 10px 0 20px 0;
+    }
+
+    h5.warning {
+        margin: -15px 0 20px 0;
+        font-size: 0.7em;
+        font-weight: 400;
+        color: $warning-text;
+    }
+
+    .type .button-type {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .order,
+    .error,
+    .title,
+    .id {
+        color: $lens-text-soft;
+        display: inline;
+        font-size: 0.7em;
+        font-weight: 500;
+    }
+
+    .id:before {
+        // This is so double clicking the id only selects the id
+        // Making it easier for the user to copy
+        content: "";
+        display: block;
+    }
+
+    .options .order,
+    .options .title,
+    .options .id {
+        position: relative;
+        margin: 0 26px 0 20px;
+    }
+
+    .id-box {
+        min-height: 15px;
+    }
+
+    .options .order {
+        top: 9px;
+        left: -25px;
+        color: $lens-text-hard;
+    }
+
+    .options .error {
+        white-space: pre-wrap;
+    }
+
+    .options.p-hlntv .title,
+    .options.p-hlntv .id {
+        margin: unset;
+    }
+
+    .options.p-hlntv .order {
+        margin: unset;
+        left: -5px;
+    }
+
+    .invalid .order,
+    .invalid .title,
+    .invalid .id,
+    .options .invalid .order,
+    .options .invalid .id,
+    .options .error {
+        color: $error-dark;
+    }
+
+    .options.zero-options .title,
+    .options.p-hlntv.zero-options .title {
+        color: $lens-text-soft;
+        font-weight: 500;
+    }
+
+    .options.p-hlntv.zero-options .title {
+        font-style: italic;
+    }
+
+    .id {
+        float: right;
+        margin-top: 3px;
+        position: relative;
+        bottom: -2px;
+    }
+
+    .textarea-wrapper {
+        overflow: auto;
+    }
+
+    textarea {
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        min-height: 1.88rem;
+        max-height: 800px;
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        height: 1rem;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        resize: none;
+        display: block;
+    }
+
+    .options textarea::placeholder {
+        font-style: italic;
+        color: $lens-text-soft;
+    }
+
+    .options textarea {
+        background-color: $node-green;
+        border-color: $background-white;
+        color: $background-white;
+    }
+
+    .options.p-hlntv textarea {
+        background-color: $option-blue;
+        border-color: $option-blue;
+    }
+
+    .options.p-hlntv textarea:hover,
+    .options.p-hlntv textarea:focus {
+        border-color: $lens-border-highlight;
+        outline: none;
+    }
+
+    .option-box {
+        border-radius: 6px;
+        z-index: 100;
+        position: relative;
+        margin-left: 20px;
+    }
+
+    .drag {
+        background-size: 10px;
+        background-repeat: no-repeat;
+        background-position-x: 3px;
+        background-position-y: center;
+        width: 7px;
+        margin: 0;
+        float: left;
+        margin-right: -17px;
+        z-index: 200;
+        border-radius: 2px;
+        padding-left: 13px;
+        background-color: transparent;
+        cursor: pointer;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+    .drag-background {
+        border-radius: 2px;
+        position: relative;
+        background-color: $background-white;
+    }
+
+    .drag-background:hover {
+        background-color: $node-background-green;
+    }
+
+    .p-hlntv .drag-background {
+        border: 1px solid $lens-border-soft;
+        background-color: $lens-soft-background;
+        padding: 5px 0;
+    }
+
+    .drop-holder {
+        list-style: none;
+        margin: 0 0 3px 0;
+    }
+
+    .options ul {
+        margin: 0 0 10px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .btn-delete,
+    .btn-add {
+        float: right;
+        cursor: pointer;
+        width: 19px;
+        height: 19px;
+        background-repeat: no-repeat;
+        margin: 4px 3px 0 3px;
+        opacity: 0.5;
+        background-size: 15px 15px;
+        background-position: center;
+        border: 1px solid transparent;
+    }
+
+    .btn-delete,
+    .drop-holder:hover .btn-delete:active {
+        background-image: $svg-delete;
+    }
+
+    .drop-holder:hover .btn-delete {
+        background-image: $svg-delete-active;
+        opacity: 1;
+    }
+
+    .drop-holder:hover .btn-delete:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    .drop-holder:hover .btn-delete:active {
+        background-color: $error;
+    }
+
+    .btn-add,
+    .add:hover .btn-add:active {
+        background-image: $svg-add;
+    }
+
+    .btn-add {
+        margin: 19px 15px 8px 3px;
+    }
+
+    .add:hover .btn-add {
+        background-image: $svg-add-active;
+        opacity: 1;
+    }
+
+    .add:hover .btn-add:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    .add:hover .btn-add:active {
+        background-color: $solution;
+    }
+
+    .add {
+        overflow: hidden;
+        margin-right: -11px;
+    }
+
+    .drag:hover {
+        background-color: $option-green-hover;
+    }
+
+    .p-hlntv .drag:hover {
+        background-color: $option-blue-hover;
+    }
+
+    .drag:active {
+        background-color: $option-blue;
+    }
+
+    .drop-holder:hover .drag-background {
+        border-color: $option-blue;
+    }
+
+    .p-hlntv .drop-holder:hover .drag-background {
+        border-color: $option-blue;
+    }
+
+    .drop-holder:hover .order,
+    .p-hlntv .drop-holder:hover .order {
+        display: none;
+    }
+
+    .drop-holder:hover textarea {
+        border-color: $lens-border-highlight;
+    }
+
+    .drop-holder:hover .drag {
+        background-image: $svg-double-arrow-green;
+        background-size: 9.5px;
+        background-position: 5px 8px;
+    }
+
+    .p-hlntv .drop-holder:hover .drag {
+        background-image: $svg-double-arrow-blue;
+    }
+
+    .p-hlntv .drop-holder .drag:active {
+        background-image: $svg-double-arrow-white;
+    }
+
+    .drop-holder:first-child:hover .drag,
+    .drop-holder:last-child:hover .drag {
+        background-image: $svg-arrow-green;
+        background-size: 10px;
+        background-position: 5px 14px;
+    }
+
+    .drop-holder:first-child:hover .drag {
+        background-image: $svg-arrow-down-green;
+        background-size: 10px;
+        background-position: 5px 16px;
+    }
+
+    .p-hlntv .drop-holder:last-child:hover .drag {
+        background-image: $svg-arrow-blue;
+    }
+
+    .p-hlntv .drop-holder:first-child:hover .drag {
+        background-image: $svg-arrow-down-blue;
+    }
+
+    .drop-holder:last-child .drag:active,
+    .p-hlntv .drop-holder:last-child .drag:active {
+        background-image: $svg-arrow-white;
+    }
+
+    .drop-holder:first-child .drag:active,
+    .p-hlntv .drop-holder:first-child .drag:active {
+        background-image: $svg-arrow-down-white;
+    }
+
+    // .p-hlntv .drag-background:active {
+    //     background-color: $option-blue;
+    // }
+
+    // .discussion {
+    //     margin: 10px 0;
+    //     border-bottom: 1px solid $lens-border-soft;
+    //     padding-bottom: 20px;
+    // }
+
+    .dragged-over {
+        background-color: $option-blue;
+    }
+}
+
+
+.hidden {
+    display: none;
+}

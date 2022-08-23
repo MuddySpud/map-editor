@@ -1,0 +1,350 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#treesView {
+
+    .loading {
+        margin: 60px 0 0 100px;
+
+        .tree-spinner {
+            position: relative;
+            margin: -60px 0 0 0;
+        }
+    }
+
+    .tree-display {
+        margin: 50px 10px;
+        width: calc(50% - 14px);
+        padding: 0 8px 0 0;
+        box-sizing: border-box;
+    }
+
+    .tree-table {
+        display: table;
+        width: 100%;
+    }
+
+    .tree-row {
+        color: $lens-text-soft;
+        color: rgb(0, 230, 255);
+        font-size: 0.8em;
+        font-weight: 400;
+        margin: 0 10px;
+        padding: 0 10px;
+        display: table-row;
+    }
+
+    .tree-cell {
+        width: 30px;
+        display: table-cell;
+        padding: 0;
+    }
+
+    .icon {
+        width: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .narrow,
+    .narrow>.icon {
+        width: 22px;
+    }
+
+    .icon.button {
+        border: 1px solid transparent;
+        border-radius: 2px;
+        padding: 2px 0px 5px 0px;
+        margin: 0 2px;
+    }
+
+    .icon.button.on,
+    .icon.button.on-quiet {
+        cursor: pointer;
+    }
+
+    .icon.button.on-quiet {
+        margin: 0;
+    }
+
+    .icon.button.on:hover,
+    .icon.button.on-quiet:hover {
+        border-color: rgb(0, 255, 255);
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .icon.disabled.button.on:hover,
+    .icon.disabled.button.on-quiet:hover {
+        border-color: transparent;
+        background-color: transparent;
+    }
+
+    .name {
+        display: table-cell;
+        padding: 5px 5px 5px 10px;
+        vertical-align: middle;
+    }
+
+    .create-icon,
+    .bot-icon,
+    .info-icon,
+    .tree-icon,
+    .flat-tree-icon,
+    .loop-tree-icon,
+    .edit-icon,
+    .delete-icon,
+    .subtree-icon,
+    .branches-icon,
+    .tree-project-icon,
+    .tick-icon {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        display: block;
+        background-repeat: no-repeat;
+        position: relative;
+        opacity: 0.5;
+    }
+
+    .info-icon,
+    .branches-icon,
+    .tree-project-icon {
+        display: none;
+    }
+
+    .tree-icon {
+        background-image: $svg-tree;
+        background-image: url("../../../../images/treeWhite.svg");
+    }
+
+    .create-icon {
+        background-image: url("../../../../images/plusOrangeCircle2Ghost.svg");
+        left: -23px;
+        top: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 1.5px 0 0 0;
+    }
+
+    .flat-tree-icon {
+        background-image: url("../../../../images/flatTreeGhost.svg");
+    }
+
+    .loop-tree-icon {
+        background-image: url("../../../../images/loopTreeWhite.svg");
+    }
+
+    .icon .tick-icon {
+        background-image: $svg-tick;
+        width: 13px;
+        height: 13px;
+        top: -8px;
+        left: 3px;
+    }
+
+    .subtree-icon {
+        background-image: $svg-subtree;
+        background-image: url("../../../../images/subtreeGhost.svg");
+        top: 3px;
+    }
+
+    .bot-icon {
+        background-image: $svg-bot;
+        background-image: url("../../../../images/botGhost3.svg");
+    }
+
+    .info-icon {
+        background-image: $svg-info;
+        top: -4px;
+        margin: 0;
+    }
+
+    .tick-icon {
+        background-image: $svg-info;
+    }
+
+    .branches-icon {
+        background-image: url("../../../../images/branchesGhost.svg");
+        background-image: url("../../../../images/branches2.svg");
+        // background-image: $svg-locate;
+        width: 25px;
+        left: -3px;
+        top: 2px;
+    }
+
+    .tree-project-icon {
+        background-image: url("../../../../images/treeProjectGhost.svg");
+        // background-image: $svg-locate;
+        width: 25px;
+        left: 0;
+        top: 1px;
+    }
+
+    .tree-row.selected,
+    .tree-row:hover {
+        color: $lens-text-hard;
+        background-color: rgba(0, 0, 0, 0.2);
+        background-blend-mode: multiply;
+
+        .bot-icon,
+        .tree-icon,
+        .flat-tree-icon,
+        .loop-tree-icon,
+        .subtree-icon,
+        .branches-icon,
+        .tree-project-icon,
+        .tick-icon {
+            opacity: 1;
+        }
+
+        .tree-icon {
+            background-image: $svg-tree;
+        }
+
+        .flat-tree-icon {
+            background-image: url("../../../../images/flatTree.svg");
+        }
+
+        .loop-tree-icon {
+            background-image: url("../../../../images/loopTree.svg");
+        }
+
+        .icon:hover .edit-icon {
+            background-image: url("../../../../images/pencil6.svg");
+            opacity: 1;
+        }
+
+        .icon:hover .delete-icon {
+            background-image: url("../../../../images/dustbin.svg");
+            opacity: 1;
+        }
+
+        .subtree-icon {
+            background-image: $svg-subtree;
+        }
+
+        .bot-icon {
+            background-image: $svg-bot;
+        }
+
+        .branches-icon {
+            background-image: url("../../../../images/branchesGhost.svg");
+            background-image: url("../../../../images/branches2.svg");
+            // background-image: $svg-locate;
+        }
+
+        .tree-project-icon {
+            background-image: url("../../../../images/treeProject.svg");
+        }
+    }
+
+    .tree-row.selected {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .tree-row:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+
+        .edit-icon {
+            // background-image: url("../../../../images/pencilHighlight8.svg");
+            background-image: url("../../../../images/pencilGhost.svg");
+            top: 2px;
+        }
+
+        .delete-icon {
+            background-image: url("../../../../images/dustbinGhost.svg");
+            top: 1px;
+        }
+
+        .icon.disabled:hover .delete-icon {
+            background-image: url("../../../../images/dustbinGhost.svg");
+            cursor: default;
+            opacity: 0.5;
+        }
+    }
+
+    .tree-row:hover {
+
+        .info-icon {
+            opacity: 1;
+        }
+
+        .info-icon,
+        .branches-icon,
+        .tree-project-icon {
+            display: block;
+        }
+
+        .info-icon:hover {
+            background-image: $svg-info-active;
+        }
+    }
+
+    .first-tree {
+        margin: auto;
+        width: 50%;
+        display: block;
+        top: calc(40vh - 100px);
+        position: relative;
+
+        a {
+            padding: 5px 20px;
+            margin: 0;
+            border: none;
+            cursor: pointer;
+            box-sizing: border-box;
+            border-radius: 2px;
+            float: left;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(0, 0, 0, 0.1);
+
+            &:hover {
+                border-color: cyan;
+                background-color: rgba(255, 255, 255, 0.2);
+
+                .tree-icon {
+                    background-image: url("../../../../images/treeBright.svg");
+                    opacity: 1;
+                }
+
+                .create-icon {
+                    opacity: 1;
+                }
+            }
+
+            &:active {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .create-icon {
+                left: -55px;
+                top: -4.5px;
+                height: 20px;
+                width: 20px;
+                float: left;
+            }
+
+            .tree-icon {
+                width: 30px;
+                height: 30px;
+                float: left;
+                left: 0;
+                top: 0;
+                margin: 0;
+            }
+
+            span {
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: 400;
+                white-space: nowrap;
+                color: #fff;
+                font-size: 1.5em;
+                font-weight: 400;
+                white-space: nowrap;
+                padding: 0 20px 0 10px;
+            }
+        }
+    }
+}

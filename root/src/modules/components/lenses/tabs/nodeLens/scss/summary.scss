@@ -1,0 +1,327 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#summaryLens {
+
+    .summary {
+
+        .button-type {
+            margin: 0 0 35px -2px;
+        }
+        
+        .warnings {
+
+            h4 {
+                color: rgb(255, 255, 0);
+            }
+
+            .warnings-box {
+                padding: 5px 0 0 0;
+                margin: 0 0 10px 0;
+                background-color: rgba(255, 255, 255, 0.05);
+                border-radius: 2px;
+
+                ul {
+                    margin-bottom: 20px;
+                }
+            }
+
+            &.minimised .warnings-box {
+                border: 1px solid rgba(255, 255, 0, 1);
+                padding: 0 0 5px 20px;
+
+                .box-controls {
+                    margin-top: 6px;
+                }
+            }
+
+            .box-controls {
+                margin-top: 1px;
+                right: 15px;
+            }
+
+            .error-row {
+                color: rgba(255, 255, 0);
+                display: table-row;
+
+                .error-index,
+                .error-value {
+                    display: table-cell;
+                }
+
+                .error-index {
+                    width: 15px;
+                }
+            }
+
+            .warning {
+                box-sizing: border-box;
+                // display: table;
+                margin: 0;
+                padding: 0 10px 20px 21px;
+                width: 100%;
+
+                h4 {
+                    color: rgba(255, 255, 255, 0.5);
+                    position: absolute;
+                }
+
+                .warning-box {
+                    padding: 7px 0 11px 0;
+                    margin: 0;
+                    border: 1px solid rgba(255, 255, 0, 1);
+                    border-radius: 2px;
+                    font-size: 0.7em;
+                    font-weight: 500;
+                    display: table;
+                    width: 100%;
+
+                    .index {
+                        padding-left: 20px;
+                    }
+
+                    .key {
+                        padding-left: 0;
+                    }
+                }
+
+                .open-view {
+                    margin: 1px 0 0 -40px;
+                    margin-top: 6px;
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    border: none;
+                    padding: 0;
+                    height: 18px;
+                    width: 18px;
+                    cursor: pointer;
+                    position: absolute;
+                }
+
+                &:hover {
+
+                    .open-view {
+                        background-image: url("../../../../../images/openViewPink.svg");
+                    }
+
+                    .open-view:active {
+                        background-image: url("../../../../../images/openViewCyan.svg");
+                    }
+                }
+
+                .warning-data {
+                    padding: 0;
+                    margin: 0;
+                    display: table;
+                    width: 100%;
+
+                    .index {
+                        padding-left: 20px;
+                    }
+
+                    .key {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+
+        .node,
+        .tree,
+        .root,
+        .stRoot,
+        .children,
+        .option-data {
+            padding: 5px 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+            width: 100%;
+            margin: 0 0 20px 0;
+            display: table;
+
+            .key,
+            .value,
+            .index {
+                font-size: 0.63rem;
+                font-weight: 500;
+            }
+
+            .key {
+                width: 126px;
+            }
+        }
+
+        .option-data {
+            padding: 7px 0 11px 0;
+            margin: 0;
+        }
+
+        .stSocket>.stSocket-box {
+            padding: 5px 0;
+
+            .stSocket-summary {
+                display: table;
+                width: 100%;
+
+                .key,
+                .value {
+                    font-size: 0.63rem;
+                    font-weight: 500;
+                }
+
+                .key {
+                    width: 126px;
+                }
+            }
+
+            .holes {
+
+                h4 {
+                    padding: 5px 0 8px 20px;
+                }
+
+                .option {
+                    display: table;
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 0 0 20px 0;
+                    padding: 0 10px 0 21px;
+
+                    .open-view {
+                        margin: 8px 0 0 -40px;
+                    }
+
+                    .index {
+                        padding-left: 20px;
+                    }
+
+                    .key {
+                        padding-left: 0;
+                        width: 90px;
+                    }
+                }
+            }
+        }
+
+        .action-details {
+            padding: 3px 0 0 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+            margin: 0 0 20px 0;
+
+            &.minimised {
+                padding-bottom: 8px;
+            }
+
+            .box-controls {
+                right: 15px;
+                margin-top: 2px;
+            }
+
+            .node {
+                border: none;
+                padding-bottom: 0;
+                margin: 0;
+                width: calc(100% - 10px);
+            }
+
+            .children {
+                border: none;
+                margin-bottom: 0;
+                padding: 0;
+
+                .option {
+                    box-sizing: border-box;
+                    width: 100%;
+                    margin: 0 0 20px 0;
+                    padding: 0 10px 0 21px;
+
+                    .option-data {
+
+                        .index {
+                            font-size: 0.7em;
+                            padding-left: 20px;
+                        }
+
+                        .key {
+                            padding-left: 0;
+                        }
+                    }
+                }
+
+                h4 {
+                    padding: 5px 0 8px 20px;
+                }
+            }
+
+        }
+
+        .stRoot {
+            font-size: 0.7em;
+        }
+
+        .row {
+            .key {
+                padding: 3px 5px 3px 20px;
+            }
+        }
+
+        h4,
+        .stSocket h4 {
+            margin: 5px 0 2px 0;
+        }
+
+        .stSocket {
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+
+        .hub {
+            display: flex;
+            width: 100%;
+
+            .hub-left {
+                flex: calc(100% - 155px);
+
+                .tree {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .hub-right {
+                flex: 100px;
+                margin: -87px 0 0 0;
+
+                .button-press {
+                    margin: 0;
+
+                    button {
+                        width: 100%;
+                        margin: 0 0 10px 0;
+                    }
+                }
+            }
+        }
+
+        .row.overriden>.value {
+            color: rgb(0, 255, 255);
+        }
+
+        textarea,
+        input {
+            background-color: #3432a0;
+            border-color: #3432a0;
+            color: white;
+            outline: none;
+
+            &:hover {
+                border-color: rgb(0, 255, 255);
+            }
+        }
+
+        .order-box span {
+            padding-bottom: 2px;
+        }
+    }
+}

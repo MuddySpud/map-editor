@@ -1,0 +1,427 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#treeLens #subtreeLens {
+
+    .hub {
+        margin-bottom: 20px;
+    }
+
+    input {
+        padding: 5px;
+    }
+
+    .title {
+        color: $lens-text-soft;
+        display: block;
+        font-size: 0.7em;
+        font-weight: 500;
+        position: relative;
+    }
+
+    ul {
+        margin: 0 0 10px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin: 0 0 10px 0;
+    }
+
+    .border {
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5px 0;
+    }
+
+    .order {
+        float: left;
+        color: $lens-text-soft;
+        font-size: 0.7em;
+        font-weight: 500;
+        padding: 9px 8px 0 9px;
+    }
+
+    .textarea-wrapper,
+    .input-wrapper {
+        overflow: auto;
+    }
+
+    textarea,
+    input {
+        border: 1px solid rgb(120, 0, 20);
+        border-radius: 2px;
+        min-height: 1.88rem;
+        max-height: 800px;
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        height: 1rem;
+        box-sizing: border-box;
+        resize: none;
+        display: block;
+        color: $lens-text-hard;
+        background-color: rgb(120, 0, 20);
+    }
+
+    textarea::placeholder {
+        font-style: italic;
+        color: $lens-text-soft;
+    }
+
+    textarea:hover,
+    input:hover {
+        border-color: rgb(255, 120, 255);
+    }
+
+    .btn-delete,
+    .btn-add {
+        float: right;
+        cursor: pointer;
+        width: 19px;
+        height: 19px;
+        background-repeat: no-repeat;
+        margin: 4px 3px 0 3px;
+        opacity: 0.5;
+        background-size: 15px 15px;
+        background-position: center;
+        border: 1px solid transparent;
+    }
+
+    .btn-delete,
+    li:hover .btn-delete:active {
+        background-image: $svg-delete;
+    }
+
+    li:hover .btn-delete {
+        background-image: $svg-delete-active;
+        opacity: 1;
+    }
+
+    li:hover .btn-delete:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    li:hover .btn-delete:active {
+        background-color: $error;
+    }
+
+    .btn-add,
+    .add:hover .btn-add:active {
+        background-image: $svg-add;
+    }
+
+    .btn-add {
+        margin: 19px 15px 8px 3px;
+    }
+
+    .add:hover .btn-add {
+        background-image: $svg-add-active;
+        opacity: 1;
+    }
+
+    .add:hover .btn-add:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    .add:hover .btn-add:active {
+        background-color: $solution;
+    }
+
+    .add {
+        overflow: hidden;
+        margin-right: -11px;
+    }
+
+    .drag:hover {
+        background-color: $option-green-hover;
+    }
+
+    .holes-box {
+        padding: 0;
+        margin: 0;
+    }
+
+    .flaws,
+    .holes {
+        padding: 0;
+
+        .flaw-message {
+            color: $lens-text-soft;
+            padding: 0 0 0 20px;
+            margin: 0;
+            font-style: italic;
+            font-size: 0.7em;
+            font-weight: 300;
+        }
+
+        .flaw {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 0 10px 0;
+            padding: 0;
+            background-color: rgba(255, 255, 255, 0.05);
+
+            .icon {
+                .open-view {
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    border: none;
+                    padding: 0;
+                    height: 18px;
+                    width: 18px;
+                    cursor: pointer;
+                    position: absolute;
+                    margin: 8px 0 0 -40px;
+                }
+            }
+
+            &:hover {
+
+                .open-view {
+                    background-image: url("../../../../../images/openViewPink.svg");
+                }
+
+                .open-view:active {
+                    background-image: url("../../../../../images/openViewCyan.svg");
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .flaw-data {
+                padding: 5px 0;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                border-radius: 2px;
+                width: 100%;
+                margin: 0 0 20px 0;
+                display: table;
+                padding: 5px 0;
+                margin: 0;
+
+                .key,
+                .value,
+                .index {
+                    font-size: 0.63rem;
+                    font-weight: 500;
+                }
+
+                .key {
+                    width: 126px;
+                }
+            }
+        }
+    }
+
+    .minimised .flaws {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sockets-details {
+
+        &.no-border {
+            padding: 20px 10px 1px 21px;
+            margin: 0 0 10px 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 2px;
+            border-style: none;
+        }
+
+        .socket-message,
+        .hole-message {
+            color: $lens-text-soft;
+            padding: 0 0 0 30px;
+            margin: 0;
+            font-size: 0.7em;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        &>.box-controls {
+            margin-top: -13px;
+        }
+
+        &.minimised {
+
+            &>.box-controls {
+                margin-top: 0;
+            }
+        }
+
+        .hub-sockets {
+
+            h4 {
+                margin-left: 0;
+            }
+        }
+
+        .expanded-holes {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .socket-details {
+
+            &.minimised {
+                background-color: transparent;
+            }
+
+            .box-controls {
+                right: 17px;
+            }
+
+            .holes-box {
+
+                .no-holes {
+                    margin: 10px 10px 5px 20px;
+                }
+            }
+
+            &.expanded-holes {
+
+                .holes-box {
+                    margin: 5px 10px 5px 20px;
+
+                    .box-controls {
+                        right: 25px;
+                        margin-top: -19px;
+                    }
+
+                    h4 {
+                        padding: 5px 0 8px 0;
+
+                        &.no-holes {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            .holes-details {
+
+                &.no-border {
+                    border-style: none;
+                }
+
+                &.minimised {
+                    margin: 10px 10px 10px 20px;
+
+                    .box-controls {
+                        right: 25px;
+                    }
+
+                    h4 {
+                        padding: 5px 0 8px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    h4.no-holes {
+        font-style: italic;
+    }
+
+    h4.no-sockets {
+        margin: 20px 0;
+        font-style: italic;
+    }
+
+    .action-details.no-title {
+        margin-top: 25px;
+    }
+
+    .warnings {
+
+        h4 {
+            color: rgb(255, 255, 0);
+        }
+
+        .action-details.minimised {
+            border-color: yellow;
+        }
+
+        .flaws .flaw-message {
+            color: yellow;
+            font-style: normal;
+            font-weight: 500;
+        }
+
+        .notes {
+            margin: 0.5rem 0 0.5rem 0;
+            color: $lens-text-soft;
+            font-size: 0.7em;
+            font-weight: 500;
+            font-style: italic;
+            display: block;
+        }
+
+        .warnings-box {
+            padding: 5px 10px 10px 20px;
+            margin: 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 2px;
+            border-style: none;
+
+            ul {
+                margin: 1em 0;
+                padding: 0 0 0 20px;
+                list-style: none;
+                margin-bottom: 20px;
+            }
+
+            .flaws .flaw .flaw-data {
+                border-color: yellow;
+            }
+        }
+    }
+
+    .socket-edit {
+
+        .holes-box {
+            padding: 5px 25px 5px 28px;
+
+            .hole-message {
+                font-style: italic;
+                color: rgba(255, 255, 255, 0.5);
+                font-size: 0.7em;
+                font-weight: 500;
+                margin: 5px 0 2px 0;
+                padding: 0;
+            }
+
+            .holes-details {
+                margin-top: 10px;
+
+                .box-controls {
+                    right: 42px;
+                    margin-top: -21.5px;
+                }
+
+                &.minimised {
+                    border: none;
+                    margin: 0;
+                    padding: 0;
+
+                    .box-controls {
+                        right: 42px;
+                        margin-top: 0px;
+                    }    
+                }
+            }
+
+            // .no-holes {
+            //     padding: 5px 0;
+            // }
+        }
+    }
+}

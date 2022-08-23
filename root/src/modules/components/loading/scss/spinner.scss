@@ -1,0 +1,57 @@
+@import '../../init/scss/_settings';
+@import '../../init/scss/_images';
+
+
+.loading {
+    margin: 20px 0 0 0;
+
+    .tree-spinner {
+        position: absolute;
+        top: 12px;
+        left: 35px;
+    }
+
+    .tree-spinner div {
+        position: absolute;
+        left: 8px;
+        width: 3px;
+        background: $solution;
+        animation: tree-spinner-key 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .tree-spinner div:nth-child(1) {
+        left: 0;
+        animation-delay: -0.24s;
+    }
+
+    .tree-spinner div:nth-child(2) {
+        left: 5px;
+        animation-delay: -0.12s;
+    }
+
+    .tree-spinner div:nth-child(3) {
+        left: 10px;
+        animation-delay: 0;
+    }
+
+    @keyframes tree-spinner-key {
+        0% {
+            top: 8px;
+            height: 64px;
+        }
+
+        50%,
+        100% {
+            top: 24px;
+            height: 32px;
+        }
+    }
+
+    >.load-text {
+        margin: 43px 0 0 60px;
+        display: block;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+        font-size: 0.9em;
+    }
+}

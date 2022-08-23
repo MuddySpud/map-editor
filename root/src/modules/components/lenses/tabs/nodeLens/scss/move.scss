@@ -1,0 +1,505 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#branchTaskLensView {
+
+    .details,
+    .limits {
+        display: table;
+        width: 100%;
+    }
+
+    .limits {
+        padding: 0 0 20px 0;
+
+        >.error {
+            padding: 5px 0 0 20px;
+        }
+
+        >h4 {
+            margin-top: 0;
+        }
+
+        >ul {
+            margin: 0;
+            padding: 0 0 0 20px;
+        }
+
+        >.button-press {
+            margin: 50px 0 0 20px;
+
+            button {
+                float: right;
+                margin: 0;
+            }
+        }
+    }
+
+    .stSocket {
+        padding: 0;
+        margin: 0;
+
+        >h4 {
+            margin: 30px 0 0 0;
+        }
+
+        .stSocket-box {
+            padding: 8px 0 0 0;
+            margin: 2px 0 0 0;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+
+            >.box-controls {
+                right: 15px;
+                margin-top: -4px;
+            }
+
+            .stSocket-data {
+                display: table;
+                width: calc(100% - 40px);
+
+                >.row {
+                    font-size: 0.7em;
+
+                    >.key {
+                        width: 150px;
+                        padding-left: 20px;
+                    }
+                }
+            }
+
+            .holes {
+                margin: 0 0 15px 0;
+
+                h4 {
+                    padding-left: 20px;
+                }
+
+                .error-holes {
+                    color: rgb(255, 255, 0);
+                }
+
+                .error {
+                    padding: 0 0 0 20px;
+                }
+            }
+
+            .option .icon .open-view {
+                margin: 1px 0 0 -90px;
+            }
+
+            .limit .icon .open-view {
+                margin: 1px 0 0 -40px;
+            }
+
+            .limit.minimised {
+                .limit-box {
+                    padding: 0;
+                    background-color: transparent;
+                }
+
+                .icon .open-view {
+                    margin-top: 6px;
+                }
+            }
+
+            .option,
+            .limit {
+                .icon {
+                    .open-view {
+                        background-color: transparent;
+                        background-repeat: no-repeat;
+                        border: none;
+                        padding: 0;
+                        height: 18px;
+                        width: 18px;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+                }
+
+                &:hover {
+
+                    .open-view {
+                        background-image: url("../../../../../images/openViewPink.svg");
+                    }
+
+                    .open-view:active {
+                        background-image: url("../../../../../images/openViewCyan.svg");
+                    }
+                }
+            }
+
+            >.button-press {
+                margin: 20px 0 0 20px;
+            }
+        }
+    }
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    h4 {
+        margin: 0.5rem 0 0.5rem 0;
+        color: $lens-text-soft;
+        font-size: 0.7em;
+        font-weight: 500;
+    }
+
+    .single h4 {
+        margin: 1rem 0 0.5rem 0;
+    }
+
+    .header {
+        font-size: 0.7em;
+        width: 90px;
+        color: $lens-text-soft;
+        padding: 10px 0 5px 20px;
+        font-weight: 500;
+    }
+
+    .change-button {
+        margin-top: 30px;
+    }
+
+    .from,
+    .to {
+        width: 50%;
+        display: table-cell;
+        padding: 0 5px;
+    }
+
+    .limit {
+        padding: 0 0 0 20px;
+
+        .limit-box {
+            padding: 10px 0;
+            background-color: rgba(255, 255, 255, 0.1);
+            margin: 0 5px 10px 0;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+
+            >.button-type {
+                margin: -30px 0 10px 55px;
+            }
+
+            .shadow-icon {
+                height: 35px;
+
+                .hole-icon,
+                .boundary-icon,
+                .limit-icon {
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    width: 20px;
+                    height: 20px;
+                    margin: 8px 0 0 18px;
+                    float: left;
+                    border: none;
+                    position: absolute;
+                    opacity: 0.7;
+                }
+
+                .hole-icon {
+                    background-image: url("../../../../../images/hole3.svg");
+                    background-image: url("../../../../../images/hole3Ghost.svg");
+                    // margin-top: -3px;
+                    width: 22px;
+                    height: 22px;
+                    margin: 7px 0 0 17px;
+                }
+
+                .limit-icon {
+                    background-image: url("../../../../../images/limit.svg");
+                    background-image: url("../../../../../images/limitWhite.svg");
+                    background-image: url("../../../../../images/limitGhost.svg");
+                }
+
+                .boundary-icon {
+                    background-image: url("../../../../../images/boundary.svg");
+                }
+            }
+        }
+    }
+
+    .limit.minimised {
+        padding: 0 0 0px 20px;
+
+        .box-controls {
+            margin-top: 8.5px;
+        }
+
+        .stSocket-data {
+            padding: 0 0 6px 0;
+        }
+
+        .limit-data {
+            padding: 6px 0 6px 0;
+            margin-left: 25px;
+            width: calc(100% - 25px); // account for margin-left
+        }
+
+        .limit-box .shadow-icon {
+            height: 0px;
+
+            .hole-icon {
+                margin: 3.5px 0 0 7px;
+            }
+
+            .limit-icon {
+                margin: 5px 0 0 7px;
+            }
+        }
+    }
+
+    .limit-data {
+        font-size: 0.7em;
+        font-weight: 500;
+        display: table;
+        padding: 0 0 0 20px;
+        padding: 0 0 2px 0;
+        width: 100%;
+    }
+
+    .option {
+        margin: 0 0 8px 10px;
+    }
+
+    .notes {
+        margin: 0.5rem 0 0.5rem 0;
+        color: $lens-text-soft;
+        font-size: 0.7em;
+        font-weight: 500;
+        font-style: italic;
+        display: block;
+    }
+
+    .row {
+        display: table-row;
+        width: 100%;
+    }
+
+    .row .key,
+    .row .value,
+    .row .index {
+        display: table-cell;
+        padding: 3px 0 3px 0;
+    }
+
+    .row .key {
+        width: 90px;
+        color: $lens-text-soft;
+    }
+
+    .limit-data .row {
+        .key-title {
+            display: table-cell;
+            padding: 3px 0 3px 0;
+            width: 120px;
+            color: $lens-text-soft;
+        }
+
+        .key {
+            width: 115px;
+        }
+
+        .index {
+            padding-left: 20px;
+        }
+    }
+
+    .row .value {
+        white-space: pre-wrap;
+    }
+
+    .token,
+    .key {
+        margin: 10px 0;
+    }
+
+    .title {
+        color: $lens-text-soft;
+        display: inline;
+        font-size: 0.7em;
+        font-weight: 500;
+    }
+
+    .index {
+        color: $lens-text-soft;
+        width: 15px;
+    }
+
+    input,
+    textarea {
+        border: 1px solid transparent;
+        border-radius: 2px;
+        min-height: 1.88rem;
+        max-height: 800px;
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        height: 1rem;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        resize: none;
+        display: block;
+        outline: none;
+    }
+
+    input::placeholder {
+        font-style: italic;
+    }
+
+    textarea::placeholder,
+    input::placeholder {
+        font-style: italic;
+        color: $lens-text-soft;
+    }
+
+    #selectRoot input,
+    #selectBranch input {
+        border-color: rgb(255, 150, 0);
+        color: #fff;
+        background-color: rgb(255, 150, 0);
+
+        &:hover {
+            border-color: rgb(255, 255, 0);
+        }
+    }
+
+    #selectLimit input {
+        border-color: rgb(160, 200, 0);
+        color: #fff;
+        background-color: rgb(160, 200, 0);
+
+        &:hover {
+            border-color: rgb(255, 255, 0);
+        }
+    }
+
+    #branchTaskLens .discussion-icon.cloned {
+        margin-left: -9px;
+    }
+
+    #selectTarget {
+
+        .discussion-icon.cloned {
+            margin-left: -9px;
+        }
+
+        input {
+            border-color: rgb(200, 140, 255);
+            color: #fff;
+            background-color: rgb(200, 140, 255);
+
+            &:hover {
+                border-color: rgb(255, 255, 0);
+            }
+        }
+    }
+
+    .click-select {
+        background-color: $lens-checkbox-background;
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 0.7em;
+        color: $lens-text-hard;
+        font-weight: 500;
+        margin: 0 20px 15px 0;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .click-select:hover {
+        border-color: $lens-border-highlight;
+    }
+
+    .click-select:active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .from .click-select,
+    .to .click-select {
+        margin: 20px 0 10px 0;
+    }
+
+    div.error {
+        font-size: 0.7em;
+        white-space: pre-wrap;
+    }
+
+    .click-select.error {
+        color: $error-dark;
+        border-color: $error;
+    }
+
+    .click-select.error:hover {
+        background-color: $error;
+        color: $background-white;
+        border-color: $error;
+    }
+
+    .click-select.error:active {
+        background-color: $error-dark;
+        border-color: $error-dark;
+    }
+
+    .error h4 {
+        font-size: 1em;
+        color: $error-dark;
+    }
+
+    .error-head {
+        display: table-cell;
+        padding: 3px 0 3px 20px;
+    }
+
+    .error .value {
+        padding: 3px 0 3px 20px;
+    }
+
+    .textarea-wrapper {
+        overflow: auto;
+    }
+
+    textarea {
+        background-color: $option-blue;
+        border-color: $option-drag-background;
+        color: $background-white;
+    }
+
+    .new-values {
+        margin: 10px 0;
+    }
+
+    .new-values .error {
+        display: block;
+    }
+
+    .error {
+        color: #c8c8c8;
+        font-size: 0.7em;
+        font-weight: 500;
+    }
+
+    .options .error {
+        white-space: pre-wrap;
+    }
+
+    .error {
+        color: $error-dark;
+        padding: 0;
+    }
+
+    .order-box {
+        margin-top: 10px;
+    }
+}

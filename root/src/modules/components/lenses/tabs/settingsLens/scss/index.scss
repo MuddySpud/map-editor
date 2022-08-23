@@ -1,0 +1,154 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#settingsView {
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    .title {
+        padding: 5px 5px 20px 5px;
+        color: $node-green;
+        font-size: 0.9em;
+    }
+
+    .main button {
+        display: block;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 0.7em;
+        color: white;
+        font-weight: 500;
+        margin: 10px 20px 0 0;
+        outline: none;
+    }
+
+    .main button:hover {
+        border-color: cyan;
+    }
+
+    .main button:active {
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .yep,
+    .main button:active .yep {
+        background-image: $svg-tick;
+    }
+
+    .nope,
+    .main button:active .nope {
+        background-image: $svg-cross;
+    }
+
+    .yep,
+    .nope {
+        background-repeat: no-repeat;
+        width: 15px;
+        height: 10px;
+        margin-top: 1px;
+        float: left;
+    }
+
+    .nope {
+        height: 9px;
+        margin-top: 2px;
+    }
+
+    .drop-down,
+    .twin-button {
+        margin: 10px 0 0 0;
+    }
+
+    .drop-down span,
+    .twin-button span {
+        font-size: 0.7em;
+        font-weight: 500;
+        margin-right: 2px;
+    }
+
+    .twin-button button {
+        display: inline-block;
+        font-size: 1.3em;
+        font-weight: 400;
+        width: 25px;
+        margin: 0 0 0 10px;
+        background-repeat: no-repeat;
+        height: 20px;
+        width: 20px;
+        background-size: 8px 8px;
+        background-position: center;
+    }
+
+    .font-value {
+        margin: 0 10px 0 10px;
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: 1px solid $lens-border-soft;
+        border-radius: 2px;
+        padding: 5px 10px;
+        font-size: 0.7em;
+        color: white;
+        font-weight: 500;
+        width: 10px;
+        text-align: center;
+    }
+
+    .twin-button .plus,
+    .twin-button .plus:hover,
+    .twin-button .plus:active {
+        background-image: $svg-plus;
+    }
+
+    .twin-button .minus,
+    .twin-button .minus:hover,
+    .twin-button .minus:active {
+        background-image: $svg-minus;
+    }
+
+    .drop-down select {
+        padding: 12px;
+        -webkit-appearance: button;
+        appearance: button;
+        outline: none;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        padding: 5px;
+        color: white;
+        font-size: 0.7em;
+        font-weight: 500;
+        background-color: transparent;
+    }
+
+    .drop-down select option {
+        padding: 5px;
+        color: white;
+        font-weight: 500;
+        background-color: #007ca1;
+    }
+
+    .drop-down>select:hover,
+    .drop-down>select:active {
+        border-color: cyan;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .icons .settings-icon {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: 7px;
+        background-image: url("../../../../../images/settingsHighlight.svg");
+        background-image: url("../../../../../images/settingsHighlight2.svg");
+        background-image: url("../../../../../images/settingsHighlight3.svg");
+    }
+
+}

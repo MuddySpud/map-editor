@@ -1,0 +1,56 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+.images-button {
+    border: none;
+    margin-top: -62px;
+    right: 70px;
+    position: absolute;
+
+    .images-icon,
+    .show-slash-icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+
+    .images-icon {
+        cursor: pointer;
+        width: 50px;
+        height: 30px;
+        margin: 5px 1px 0px 8px;
+        opacity: 0.5;
+        background-image: url("../../../../images/imagesWhite.svg");
+    }
+
+    .show-slash-icon {
+        height: 30px;
+        width: 40px;
+        margin: -25px 1px 0px 2px;
+        position: absolute;
+        opacity: 0.3;
+        background-image: url("../../../../images/whiteSlash300tall.svg");
+    }
+
+    &:hover {
+
+        .images-icon {
+            opacity: 1;
+        }
+
+        .show-slash-icon {
+            opacity: 0.5;
+        }
+    }
+
+    &:active {
+        .images-icon {
+            background-image: url("../../../../images/imagesCyan.svg");
+        }
+
+        .show-slash-icon {
+            background-image: url("../../../../images/cyanSlash300tall.svg");
+        }
+    }
+
+}

@@ -1,0 +1,56 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+.inputs-button {
+    float: right;
+    border: none;
+    margin: -57px 8px 0 0;
+    cursor: pointer;
+
+    .inputs-icon,
+    .show-slash-icon {
+        background-color: transparent;
+        background-repeat: no-repeat;
+    }
+
+    .inputs-icon {
+        cursor: pointer;
+        width: 50px;
+        height: 30px;
+        margin: 5px 1px 0px 8px;
+        opacity: 0.5;
+        background-image: url("../../../../images/inputsWhite.svg");
+    }
+
+    .show-slash-icon {
+        width: 54px;
+        height: 33px;
+        margin: -31px 1px 0px 5px;
+        position: absolute;
+        opacity: 0.3;
+        background-image: url("../../../../images/inputsSlashWhite.svg");
+    }
+
+    &:hover {
+
+        .inputs-icon {
+            opacity: 1;
+        }
+
+        .show-slash-icon {
+            opacity: 0.5;
+        }
+    }
+
+    &:active {
+        .inputs-icon {
+            background-image: url("../../../../images/inputsCyan.svg");
+        }
+
+        .show-slash-icon {
+            background-image: url("../../../../images/inputsSlashCyan.svg");
+        }
+    }
+
+}

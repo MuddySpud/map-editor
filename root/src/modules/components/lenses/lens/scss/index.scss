@@ -1,0 +1,1219 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+@import './_title.scss';
+@import './_buttons.scss';
+@import './_table.scss';
+@import './autoComplete.scss';
+@import './controls.scss';
+
+
+#lensView {
+
+    #tabBody.overlay {
+        overflow: hidden;
+    }
+
+    textarea,
+    button,
+    input {
+        font-family: $fonts;
+    }
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    h4.explain {
+        font-size: 0.8em;
+        font-weight: 400;
+        margin: -15px 0 30px 0;
+        color: $lens-text-soft;
+        padding: 0;
+    }
+
+    #lens {
+        font-size: 0.9em;
+        z-index: 80000;
+        background-image: $background-gradient;
+        border-color: $lens-border-soft;
+        border-style: none solid solid solid;
+        border-width: 1px;
+        color: $lens-text-hard;
+        border-radius: 0 0 2px 2px;
+        width: 50%;
+        max-width: 1000px;
+        min-width: 400px;
+        position: fixed;
+        right: 0;
+        top: 39.5px;
+        margin: 10px 3px 0 0;
+    }
+
+    #lens.min {
+        height: 23px;
+    }
+
+    #lens.full {
+        bottom: 0;
+    }
+
+    .icons,
+    .icon-group {
+        height: 35px;
+    }
+
+    .icon-group {
+
+        .socket-short-icon,
+        .hole-icon,
+        .tree-icon,
+        .star-icon,
+        .filter-icon,
+        .trees-icon,
+        .stash-icon,
+        .subtree-icon,
+        .discussion-icon,
+        .goto-icon {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 5px 8px;
+            float: left;
+            border: none;
+        }
+
+        .goto-icon {
+            margin: 5px 2px 5px 2px;
+            opacity: 0.5;
+        }
+
+        .stash-icon {
+            margin: 1px 8px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .star-icon {
+            margin: 11px 0 0 -13px;
+            width: 10px;
+            height: 10px;
+            opacity: 0.9;
+        }
+
+        .filter-icon {
+            margin-left: -12px;
+        }
+
+        .tree-icon.cloned {
+            margin-left: -9px;
+        }
+
+        .trees-icon {
+            height: 25px;
+            width: 50px;
+            margin: 2px 0 0 4px;
+        }
+    }
+
+    .icons {
+
+        .swap-icon,
+        .edit-icon,
+        .tree-hub-icon,
+        .socket-icon,
+        .root-prop-icon,
+        .subtree-hub-icon,
+        .tree-bot-draft-hub-icon,
+        .draft-hub-icon,
+        .tree-icon,
+        .alias-icon,
+        .draft-icon,
+        .flat-tree-icon,
+        .loop-tree-icon,
+        .subtree-icon,
+        .shape-icon,
+        .spread-icon,
+        .bot-icon,
+        .stash-icon,
+        .root-link-icon,
+        .discussion-icon,
+        .solution-icon,
+        .root-icon {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 5px 8px;
+            float: left;
+            border: none;
+        }
+
+        .loop-tree-icon,
+        .flat-tree-icon,
+        .tree-icon {
+            margin-left: 4px;
+        }
+
+        .subtree-icon {
+            margin-top: 7px;
+        }
+
+        .swap-icon {
+            opacity: 0.4;
+        }
+
+        .stash-icon {
+            width: 30px;
+            height: 30px;
+            margin: 1px 8px;
+        }
+
+    }
+
+    .sub-icons {
+        height: 20px;
+        margin: 0 0 35px 0;
+
+        .pointer-icon,
+        .create-icon,
+        .choose-icon,
+        .socket-link-icon,
+        .select-icon,
+        .search-icon,
+        .edit-icon,
+        .star-icon,
+        .filter-icon,
+        .root-icon,
+        .discussion-icon,
+        .target-icon,
+        .tree-icon,
+        .subtree-icon,
+        .socket-icon,
+        .limit-icon,
+        .boundary-icon,
+        .hole-icon,
+        .review-icon,
+        .properties-icon {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 2px 8px 5px -65px;
+            float: left;
+            border: none;
+        }
+
+        .properties-icon {
+            width: 60px;
+            margin: 5px 8px 5px 0px;
+        }
+
+        .hole-icon {
+            margin-top: -3px;
+            width: 30px;
+            height: 30px;
+        }
+
+        .star-icon {
+            margin: 10px 0 0 -50px;
+            width: 10px;
+            height: 10px;
+        }
+
+        .limit-icon {
+            margin-top: 0;
+        }
+
+        .boundary-icon {
+            margin-top: -12.5px;
+            width: 40px;
+            height: 40px;
+        }
+
+        .review-icon {
+            margin-top: 1px;
+        }
+
+        .target-icon {
+            margin-top: 0;
+        }
+
+        // .create-icon {
+        //     margin: 6.5px 0 0 -68px;
+        //     height: 17px;
+        //     width: 17px;
+        // }
+
+        .tree-icon {
+            background-image: url("../../../../images/treeBright.svg");
+        }
+    }
+
+    .view-edit {
+        margin: 5px 0 0 0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+        background-color: rgba(0, 0, 0, 0.1);
+        display: block;
+        height: 30px;
+        width: 100px;
+        float: right;
+        box-sizing: border-box;
+        cursor: pointer;
+        padding: 0 0 0 18px;
+        outline: none;
+
+        span {
+            position: absolute;
+            color: rgba(255, 255, 255, 0.5);
+            margin: 0px 0 0 30px;
+            font-size: 0.7em;
+        }
+
+        .search-icon,
+        .select-icon,
+        .socket-link-icon,
+        .socket-short-icon,
+        .discussion-icon,
+        .target-icon,
+        .root-icon,
+        .tree-icon,
+        .subtree-icon,
+        .socket-icon,
+        .review-icon,
+        .properties-icon {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            margin: 5px 8px 5px -65px;
+            float: left;
+            border: none;
+        }
+
+        .discussion-icon {
+            margin-top: 3px;
+        }
+
+        .target-icon {
+            margin-top: 2px;
+        }
+
+        .properties-icon {
+            width: 60px;
+            margin: 5px 8px 5px 0px;
+            opacity: 0.5;
+        }
+
+        .socket-icon {
+            width: 100px;
+            margin: -25px 0 0 3px;
+        }
+
+        .search-icon {
+            margin-top: 3px;
+        }
+
+        .select-icon {
+            height: 29px;
+            width: 29px;
+            margin: 0 8px 5px -68px;
+        }
+
+        .socket-short-icon {
+            margin-left: -40px;
+        }
+
+        .tree-icon {
+            background-image: url("../../../../images/treeWhite.svg")
+        }
+
+        .subtree-icon {
+            background-image: url("../../../../images/subtreeGhost.svg")
+        }
+
+        .root-icon {
+            background-image: url("../../../../images/rootGhost.svg");
+            // background-image: url("../../../../images/rootGhost2.svg");
+        }
+
+        .socket-icon {
+            background-image: url("../../../../images/elecSocket6Ghost.svg");
+        }
+
+        .socket-short-icon {
+            background-image: url("../../../../images/elecSocketShortGhost.svg");
+        }
+
+        .discussion-icon {
+            background-image: url("../../../../images/discussionGhost.svg");
+        }
+
+        .target-icon {
+            background-image: url("../../../../images/target4Ghost.svg");
+        }
+
+        .search-icon {
+            background-image: url("../../../../images/searchGhost.svg");
+        }
+
+        .select-icon {
+            background-image: url("../../../../images/finger2Ghost.svg");
+        }
+
+        .socket-link-icon {
+            background-image: url("../../../../images/socketLinkGhost.svg");
+        }
+
+        &:hover {
+            border-color: cyan;
+            background-color: rgba(255, 255, 255, 0.2);
+
+            .tree-icon {
+                background-image: url("../../../../images/treeBright.svg");
+            }
+
+            .subtree-icon {
+                background-image: url("../../../../images/_subtree.svg");
+            }
+
+            .root-icon {
+                background-image: $svg-root;
+            }
+
+            .socket-icon {
+                background-image: url("../../../../images/elecSocket6.svg");
+            }
+
+            .properties-icon {
+                opacity: 1;
+            }
+
+            .discussion-icon {
+                background-image: url("../../../../images/discussionBright.svg");
+            }
+
+            .target-icon {
+                background-image: url("../../../../images/target4.svg");
+            }
+        }
+
+        &:active {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    #selectRoot,
+    #selectBranch,
+    #selectTarget,
+    #selectLimit {
+
+        .button-press {
+            margin-bottom: 20px;
+        }
+    }
+
+    #selectLimits .sub-icons {
+        margin-bottom: 31px;
+    }
+
+    #branchToSubtreeSummary .sub-icons {
+        margin-bottom: 23px;
+    }
+
+    .icon-border {
+        border: 5px solid rgb(255, 255, 0);
+        width: 26px;
+        height: 26px;
+        border-radius: 20px;
+
+        .root-link-icon,
+        .discussion-icon,
+        .solution-icon,
+        .root-icon {
+            float: unset;
+            margin: 3px;
+        }
+    }
+
+    .bot-icon {
+        background-image: $svg-bot;
+    }
+
+    .alias-icon {
+        background-image: url("../../../../images/_bot.svg");
+    }
+
+    .draft-icon {
+        background-image: url("../../../../images/_botDraft.svg");
+    }
+
+    .root-prop-icon {
+        background-image: url("../../../../images/rootProperties.svg");
+    }
+
+    .create-icon {
+        background-image: url("../../../../images/plusOrangeCircle2Ghost.svg");
+    }
+
+    .hole-icon {
+        background-image: url("../../../../images/hole.svg");
+        background-image: url("../../../../images/hole2.svg");
+        background-image: url("../../../../images/hole3.svg");
+    }
+
+    .limit-icon {
+        background-image: url("../../../../images/limit.svg");
+    }
+
+    .boundary-icon {
+        background-image: url("../../../../images/boundary.svg");
+        background-image: url("../../../../images/boundary2.svg");
+        background-image: url("../../../../images/boundary3.svg");
+        // background-image: url("../../../../images/boundary4.svg");
+        // background-image: url("../../../../images/boundary5.svg");
+        // background-image: url("../../../../images/boundary6.svg");
+    }
+
+    .socket-short-icon {
+        background-image: url("../../../../images/elecSocketShort.svg");
+    }
+
+    .socket-icon {
+        // background-image: url("../../../../images/socket.svg");
+        // background-image: url("../../../../images/socket2.svg");
+        // background-image: url("../../../../images/socket3.svg");
+        // background-image: url("../../../../images/socket4.svg");
+        // background-image: url("../../../../images/socket5.svg");
+        // background-image: url("../../../../images/socket6.svg");
+        // background-image: url("../../../../images/socket7.svg");
+        // background-image: url("../../../../images/socket8.svg");
+        // background-image: url("../../../../images/socket9.svg");
+        // background-image: url("../../../../images/elecSocket.svg");
+        // background-image: url("../../../../images/elecSocket2.svg");
+        // background-image: url("../../../../images/elecSocket3.svg");
+        // background-image: url("../../../../images/elecSocket4.svg");
+        background-image: url("../../../../images/elecSocket5.svg");
+        background-image: url("../../../../images/elecSocket6.svg");
+    }
+
+    .icons .socket-icon,
+    .sub-icons .socket-icon {
+        width: 100px;
+    }
+
+    .tree-hub-icon {
+        background-image: url("../../../../images/treeHub11.svg");
+    }
+
+    .subtree-hub-icon {
+        // background-image: url("../../../../images/subtreeHub.svg");
+        // background-image: url("../../../../images/subtreeHub1.svg");
+        // background-image: url("../../../../images/subtreeHub2.svg");
+        // background-image: url("../../../../images/subtreeHub3.svg");
+        // background-image: url("../../../../images/subtreeHub5.svg");
+        // background-image: url("../../../../images/subtreeHub6.svg");
+        // background-image: url("../../../../images/subtreeHub7.svg");
+        background-image: url("../../../../images/subtreeHub4.svg");
+    }
+
+    .tree-bot-draft-hub-icon {
+        background-image: url("../../../../images/botHub.svg");
+        background-image: url("../../../../images/botHub1.svg");
+        background-image: url("../../../../images/botHub3.svg");
+        background-image: url("../../../../images/botHub4.svg");
+        background-image: url("../../../../images/treeBotDraftHub.svg");
+    }
+
+    .draft-hub-icon {
+        background-image: url("../../../../images/draftHub.svg");
+        background-image: url("../../../../images/draftHub2.svg");
+        background-image: url("../../../../images/botDraftHub.svg");
+    }
+
+    .tree-icon {
+        background-image: $svg-tree;
+        background-image: url("../../../../images/treeBright.svg");
+    }
+
+    .flat-tree-icon {
+        background-image: url("../../../../images/flatTree.svg");
+    }
+
+    .loop-tree-icon {
+        background-image: url("../../../../images/loopTree.svg");
+    }
+
+    .properties-icon {
+        background-image: url("../../../../images/properties11.svg");
+    }
+
+    .review-icon {
+        background-image: url("../../../../images/thumbsUp.svg");
+        background-image: url("../../../../images/thumbsUpBright.svg");
+        // background-image: url("../../../../images/thumbsUpCyan.svg");
+        // background-image: url("../../../../images/thumbsUpBright2.svg");
+    }
+
+    .stash-icon {
+        background-image: url("../../../../images/safe3.svg");
+    }
+
+    .star-icon {
+        background-image: url("../../../../images/star1White.svg");
+        background-image: url("../../../../images/star2White.svg");
+        background-image: url("../../../../images/star2Cyan.svg");
+    }
+
+    .filter-icon {
+        background-image: url("../../../../images/filter3.svg");
+    }
+
+    .trees-icon {
+        background-image: url("../../../../images/treesColour2Lightened.svg");
+    }
+
+    .edit-icon {
+        // background-image: url("../../../../images/pencil3.svg");
+        background-image: url("../../../../images/pencil6.svg");
+    }
+
+    .search-icon {
+        background-image: url("../../../../images/searchHighlight2.svg");
+    }
+
+    .choose-icon {
+        background-image: url("../../../../images/choose.svg");
+    }
+
+    .pointer-icon {
+        background-image: url("../../../../images/mousePointer.svg");
+    }
+
+    .swap-icon {
+        background-image: url("../../../../images/swapBig2Ghost.svg");
+        background-image: url("../../../../images/swapSubtreeGhost.svg");
+        background-image: url("../../../../images/swapSubtree.svg");
+        background-image: url("../../../../images/swapSubtree2.svg");
+        background-image: url("../../../../images/swapSubtree3.svg");
+        background-image: url("../../../../images/swapSubtree4.svg");
+        background-image: url("../../../../images/swapSubtree5.svg");
+        background-image: url("../../../../images/swapSubtree6.svg");
+        background-image: url("../../../../images/swapBig2Ghost.svg");
+
+        //     height: 30px;
+        // width: 30px;
+        // margin: -2px 0 0 -7px;
+
+    }
+
+    .socket-link-icon {
+        background-image: $svg-socket-link;
+    }
+
+    .select-icon {
+        // background-image: url("../../../../images/finger2.svg");
+        // background-image: url("../../../../images/finger2Lime.svg");
+        // background-image: url("../../../../images/finger2Orange.svg");
+        // background-image: url("../../../../images/finger2Orange.svg");
+        background-image: url("../../../../images/finger2White.svg");
+        // background-image: url("../../../../images/finger3Lime.svg");
+        // background-image: url("../../../../images/finger2CyanGreen.svg");
+        // background-image: url("../../../../images/finger2GreenWhite.svg");
+        // background-image: url("../../../../images/finger2LimeCyan.svg");
+    }
+
+    .delete-icon {
+        background-image: url("../../../../images/deleteBigRed.svg");
+    }
+
+    .clone-icon {
+        background-image: url("../../../../images/deleteRed.svg");
+    }
+
+    .validation-icon {
+        background-image: url("../../../../images/validate.svg");
+        background-image: url("../../../../images/validate2.svg");
+        background-image: url("../../../../images/validate3.svg");
+        background-image: url("../../../../images/validate4.svg");
+    }
+
+    .hub-right .validation-icon {
+        background-image: url("../../../../images/validateWhite.svg");
+    }
+
+    .validation-icon.fail {
+        background-image: url("../../../../images/validate4fail3.svg");
+        // background-image: url("../../../../images/validate4White3.svg");
+    }
+
+    .shape-icon {
+        background-image: url("../../../../images/shape.svg");
+        background-image: url("../../../../images/shape1.svg");
+        background-image: url("../../../../images/shape2.svg");
+        background-image: url("../../../../images/shape3.svg");
+        // background-image: url("../../../../images/shape4.svg");
+    }
+
+    .spread-icon {
+        background-image: url("../../../../images/spread2Highlight2.svg");
+        background-image: url("../../../../images/spread6.svg");
+        background-image: url("../../../../images/spread7.svg");
+    }
+
+    .history-icon {
+        background-image: url("../../../../images/footTrail6.svg");
+    }
+
+    .tags-icon {
+        background-image: url("../../../../images/tags8.svg");
+    }
+
+    .arrow-right-icon {
+        background-image: url("../../../../images/rightArrow.svg");
+        background-image: url("../../../../images/rightArrow2.svg");
+        background-image: url("../../../../images/rightArrow3.svg");
+        background-image: url("../../../../images/rightArrow4.svg");
+        background-image: url("../../../../images/rightArrow5.svg");
+    }
+
+    .subtree-icon {
+        background-image: $svg-subtree;
+    }
+
+    .goto-icon {
+        background-image: url("../../../../images/goToGhost.svg");
+    }
+
+    .root-link-icon {
+        background-image: $svg-root-link;
+    }
+
+    .discussion-icon {
+        background-image: $svg-discussion;
+    }
+
+    .target-icon {
+        background-image: url("../../../../images/target.svg");
+        background-image: url("../../../../images/target2.svg");
+        background-image: url("../../../../images/target3.svg");
+        background-image: url("../../../../images/target4.svg");
+        // background-image: url("../../../../images/target5.svg");
+        // background-image: url("../../../../images/target6.svg");
+    }
+
+    .solution-icon {
+        background-image: $svg-solution;
+    }
+
+    .root-icon {
+        background-image: $svg-root;
+    }
+
+    .tab-button {
+        height: 16px;
+        float: left;
+        border-width: 1px;
+        border-color: $lens-border-soft;
+        border-style: none;
+        padding: 5px 15px 2px 15px;
+        margin-top: 1px;
+        cursor: pointer;
+        border-radius: 0 0 2px 2px;
+        color: $lens-text-soft;
+        position: relative;
+
+        .close-tab {
+            width: 8px;
+            height: 8px;
+            position: absolute;
+            float: right;
+            top: 8px;
+            right: 4px;
+        }
+
+        .close-icon {
+            background-image: $svg-close;
+            background-repeat: no-repeat;
+            width: 8px;
+            height: 8px;
+            display: none;
+        }
+
+        .validation-icon,
+        .spread-icon,
+        .history-icon,
+        .tags-icon,
+        .shape-icon {
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 4px;
+        }
+
+        .validation-icon {
+            margin-left: 15px;
+            width: 19px;
+            height: 19px;
+        }
+
+        .spread-icon {
+            margin-left: 6px;
+        }
+
+        .history-icon {
+            margin-left: -15px;
+            width: 70px;
+        }
+
+        .tags-icon {
+            margin-left: -2px;
+            width: 25px;
+            height: 25px;
+            top: 0;
+        }
+
+        .shape-icon {
+            margin-left: 6px;
+        }
+
+        .animate-icon,
+        .animate-text {
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-fill-mode: none;
+            animation-play-state: running;
+            animation-name: blinker-icon;
+            opacity: 0;
+        }
+
+        .animate-text {
+            animation-delay: 1s;
+        }
+
+        @keyframes blinker-icon {
+            0% {
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            45% {
+                opacity: 1;
+            }
+
+            55% {
+                opacity: 0;
+            }
+        }
+
+        &.selected {
+            background-color: $lens-soft-background;
+            color: $lens-text-hard;
+            font-weight: 500;
+            cursor: default;
+            border-style: none solid solid solid;
+
+            .close-tab {
+                top: 8px;
+            }
+        }
+
+        &:first-child {
+            border-left: none;
+            border-bottom-left-radius: 0;
+        }
+
+        &:hover {
+            color: $lens-text-hard;
+
+            .close-tab {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+
+            .close-icon {
+                display: block;
+            }
+
+            .close-tab:hover {
+                opacity: 1;
+
+                // .close-icon {
+                //     background-image: url("../../../../images/closeRed2.svg");
+                // }
+            }
+
+            .close-tab:active {
+                opacity: 1;
+
+                .close-icon {
+                    background-image: $svg-close-active;
+                }
+            }
+        }
+    }
+
+    #lens .notransition {
+        transition: none !important;
+    }
+
+    #tabBody {
+        overflow: scroll;
+        overflow-x: hidden;
+        position: absolute; // comment this out and setLensHeight() to see it the layout without resizing
+        top: 24px;
+        bottom: 3px;
+        right: 0px;
+        left: 0px;
+
+        &::-webkit-scrollbar-track {
+            background-color: $lens-trackbar;
+        }
+
+        &::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 3px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+
+    #tabBox {
+        padding: 20px;
+    }
+
+    #lens:hover #tabBody::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 255, 255, 0.5);
+        border-color: rgba(0, 255, 255, 0.5);
+    }
+
+    #lens:hover #tabBody::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(50, 255, 255, 0.8);
+        border-color: rgba(50, 255, 255, 0.8);
+    }
+
+    .child-controls {
+
+        .show-tree-hub,
+        .show-subtree-hub,
+        .forward,
+        .back,
+        .close-view,
+        .open-subtree,
+        .swap-subtree,
+        .show-selected,
+        .click-selector,
+        .refresh {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin: 5px 8px;
+            float: right;
+            border: none;
+        }
+
+        .refresh {
+            background-image: $svg-refresh;
+            opacity: 0.5;
+        }
+
+        .refresh:hover {
+            opacity: 1;
+        }
+
+        .refresh:active {
+            background-image: $svg-refresh-active;
+        }
+
+        .show-subtree-hub {
+            background-image: url("../../../../images/treeHubWhiteCyan.svg");
+            // background-image: url("../../../../images/treeHubWhiteCyan2.svg");
+            // background-image: url("../../../../images/treeHubWhiteCyan3.svg");
+            // background-image: url("../../../../images/treeHubWhiteCyan4.svg");
+            opacity: 0.5;
+        }
+
+        .show-tree-hub {
+            background-image: url("../../../../images/treeHubWhiteGreen.svg");
+            background-image: url("../../../../images/treeHubWhiteGreen2.svg");
+            // background-image: url("../../../../images/treeHubWhiteGreen3.svg");
+            // background-image: url("../../../../images/treeHubWhiteGreen4.svg");
+            // background-image: url("../../../../images/treeHubWhiteGreen5.svg");
+            // background-image: url("../../../../images/treeHubWhiteGreen6.svg");
+            opacity: 0.5;
+        }
+
+        .show-tree-hub:hover,
+        .show-subtree-hub:hover {
+            opacity: 1;
+        }
+
+        .show-tree-hub:active {
+            background-image: url("../../../../images/treeHubCyan.svg");
+        }
+
+        .show-subtree-hub:active {
+            background-image: url("../../../../images/treeHubCyan.svg");
+        }
+
+        .show-selected {
+            background-image: $svg-locate;
+            opacity: 0.5;
+        }
+
+        .show-selected.br-option,
+        &.br-option .show-selected {
+            background-image: url("../../../../images/locateOrange.svg");
+        }
+
+        &.br-target .show-selected {
+            background-image: url("../../../../images/locatePurple.svg");
+        }
+
+        &.br-limit .show-selected {
+            background-image: url("../../../../images/locateLime.svg");
+        }
+
+        .show-selected:hover {
+            opacity: 1;
+        }
+
+        .show-selected.br-target {
+            background-image: url("../../../../images/locatePurple.svg");
+        }
+
+        .show-selected:active,
+        &.br-option .show-selected:active,
+        &.br-target .show-selected:active,
+        &.br-limit .show-selected:active {
+            background-image: $svg-locate-active;
+        }
+
+        .swap-subtree {
+            background-image: $svg-swap;
+            opacity: 0.5;
+        }
+
+        .swap-subtree:hover {
+            opacity: 1;
+        }
+
+        .swap-subtree:active {
+            background-image: $svg-swap-active;
+        }
+
+        .click-selector {
+            background-image: url("../../../../images/finger2White.svg");
+            opacity: 0.5;
+            height: 21px;
+            width: 21px;
+        }
+
+        &.br-option .click-selector {
+            background-image: url("../../../../images/finger2Orange.svg");
+            background-image: url("../../../../images/finger3Orange.svg");
+        }
+
+        &.br-target .click-selector {
+            background-image: url("../../../../images/finger2Purple.svg");
+            background-image: url("../../../../images/finger3Purple.svg");
+        }
+
+        &.br-limit .click-selector {
+            background-image: url("../../../../images/finger2Lime.svg");
+            background-image: url("../../../../images/finger3Lime.svg");
+        }
+
+        .click-selector:hover {
+            opacity: 1;
+        }
+
+        .click-selector:active,
+        &.br-option .click-selector:active,
+        &.br-target .click-selector:active,
+        &.br-limit .click-selector:active {
+            background-image: url("../../../../images/finger2Active.svg");
+        }
+
+        .open-subtree.br-option,
+        &.br-option .open-subtree {
+            background-image: url("../../../../images/newTabOrange.svg");
+        }
+    }
+
+    .controls .open-subtree,
+    .child-controls .open-subtree {
+        background-image: $svg-new-tab;
+        opacity: 0.5
+    }
+
+    .controls .open-subtree:hover,
+    .child-controls .open-subtree:hover {
+        opacity: 1;
+    }
+
+    .controls .open-subtree:active,
+    .child-controls .open-subtree:active {
+        background-image: $svg-new-tab-active;
+    }
+
+    .child-controls .close-view,
+    .child-controls .back,
+    .child-controls .forward {
+        opacity: 0.5;
+    }
+
+    .child-controls .close-view:hover,
+    .child-controls .back:hover,
+    .child-controls .forward:hover {
+        opacity: 1;
+    }
+
+    .child-controls .back.disabled,
+    .child-controls .forward.disabled {
+        opacity: 0.1;
+        cursor: default;
+    }
+
+    .child-controls .back,
+    .child-controls .back.disabled {
+        background-image: $svg-back;
+    }
+
+    .child-controls .back:active {
+        background-image: $svg-back-active;
+    }
+
+    .child-controls .forward,
+    .child-controls .forward.disabled {
+        background-image: $svg-forward;
+    }
+
+    .child-controls .forward:active {
+        background-image: $svg-forward-active;
+    }
+
+    .child-controls .close-view {
+        background-image: url("../../../../images/close4White.svg");
+    }
+
+    .child-controls .close-view:hover {
+        background-image: url("../../../../images/close4Red.svg");
+    }
+
+    .child-controls .close-view:active {
+        background-image: url("../../../../images/close4Active.svg");
+    }
+
+    #tabHeader {
+        position: relative;
+        height: 23px;
+        font-size: 0.7em;
+        font-weight: 500;
+        border-radius: 2px;
+        display: flex;
+        z-index: 5100;
+    }
+
+    #headerShadow {
+        height: 10px;
+        position: absolute;
+        width: 100%;
+        top: 14px;
+        box-shadow: 0 3px 2px 0px rgba(100, 100, 100, 0.3);
+        mix-blend-mode: multiply;
+        display: none;
+        z-index: 5000;
+    }
+
+    #headerShadow.show {
+        display: block;
+    }
+
+    #tabHeader.shadow {
+        box-shadow: 0 3px 2px 0px rgba(100, 100, 100, 0.3);
+    }
+
+    .lens-actions {
+        padding-top: 40px;
+    }
+
+    .lens-actions button {
+        background-color: $lens-soft-background;
+        font-size: 0.9em;
+        font-weight: 400;
+        margin-left: 0;
+        margin-top: 5px;
+        border-radius: 2px;
+        border: 1px solid $lens-border-soft;
+        display: block;
+        padding: 10px 20px 10px 20px;
+        cursor: pointer;
+        color: $lens-text-hard;
+    }
+
+    .lens-actions button:hover {
+        background-color: $error;
+        border-color: $error;
+        color: $background-white;
+    }
+
+    .lens-actions button:active {
+        background-color: black;
+        border-color: $error;
+        color: $background-white;
+    }
+
+    .lens-actions .save,
+    .lens-actions .link,
+    .lens-actions .search,
+    .lens-actions .select,
+    .lens-actions .next {
+        float: left;
+    }
+
+    .lens-actions button:disabled,
+    .lens-actions button.disabled {
+        color: $lens-text-disabled;
+        border-color: $lens-outline-disabled;
+        background-color: $lens-background-disabled;
+        cursor: default;
+        outline: none;
+    }
+
+    .lens-actions button:disabled:hover,
+    .lens-actions button:disabled:active {
+        color: $lens-text-disabled;
+        border-color: $lens-outline-disabled;
+        background-color: $lens-background-disabled;
+    }
+
+    .lens-actions .cancel,
+    .lens-actions .delete {
+        float: right;
+    }
+
+    .lens-actions::after {
+        content: " ";
+        display: block;
+        height: 0;
+        clear: both;
+    }
+}

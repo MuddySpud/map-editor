@@ -1,0 +1,25 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#botTab {
+
+    .load-text {
+        margin: -3px 0 0 50px;
+        margin: 0;
+        left: 40px;
+        position: relative;
+        top: 47px;
+    }
+
+    .loading {
+        margin: 0;
+        padding: 0;
+
+        .bot-spinner {
+            position: relative;
+            left: 4px;
+            top: 0;
+        }
+    }
+}

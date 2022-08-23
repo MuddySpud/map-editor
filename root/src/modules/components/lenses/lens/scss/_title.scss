@@ -1,0 +1,53 @@
+@import '../../../init/scss/_settings';
+
+
+#lensView {
+
+    .title-table {
+        display: table;
+        width: 100%;
+        min-height: 19px;
+
+        .title-row {
+            display: table-row;
+
+            .title-cell,
+            .id-cell {
+                display: table-cell;
+                padding: 0 0 2px 0;
+                vertical-align: bottom;
+            }
+
+            .id-cell {
+                width: 50px;
+                text-align: right;
+                padding: 0 2px 3px 0;
+            }
+
+            .title-cell .title {
+                display: block;
+            }
+
+            .title-cell .error {
+                display: block;
+                color: $error-dark;
+            }
+
+            .error,
+            .title,
+            .id {
+                color: $lens-text-soft;
+                display: inline;
+                font-size: 0.7em;
+                font-weight: 500;
+            }
+
+            .id {
+                float: right;
+                margin-top: 3px;
+                position: relative;
+                bottom: -2px;
+            }
+        }
+    }
+}

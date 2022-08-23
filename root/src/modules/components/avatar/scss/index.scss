@@ -1,0 +1,48 @@
+#avatar {
+    height: 20px;
+    color: #fff;
+    font-size: 0.75em;
+    font-weight: 400;
+
+    a {
+        height: 20px;
+        background-color: red;
+        opacity: 0.5;
+        cursor: pointer;
+        border: 1px solid green;
+        height: 20px;
+        width: 100px;
+        display: block;
+
+        // .icon {
+        //     background-repeat: no-repeat;
+        //     cursor: pointer;
+        //     width: 20px;
+        //     height: 20px;
+        //     float: left;
+        //     border: none;
+        //     background-image: url("../../../images/avatarWhite.svg");
+        //     opacity: 0.5;
+        // }
+
+        // span {
+        //     position: relative;
+        //     margin: 0 0 0 30px;
+        //     white-space: nowrap;
+        //     display: block;
+        //     float: left;
+        // }
+
+        &:hover {
+            opacity: 1;
+    
+            .icon {
+                opacity: 1;
+            }
+        }
+    
+        &:active .icon {
+            background-image: url("../../../images/avatarCyan.svg");
+        }    
+    }
+}

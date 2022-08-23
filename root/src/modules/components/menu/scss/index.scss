@@ -1,0 +1,375 @@
+@import '../../init/scss/_settings';
+@import '../../init/scss/_images';
+
+
+#menuView {
+
+    .logo {
+        background-image: url("../../../images/_netOfTrees.head.logo-lime.svg");
+        height: 35px;
+        width: 35px;
+        background-repeat: no-repeat;
+        top: 2px;
+        left: 2px;
+        position: absolute;
+
+        &.tree-icon {
+            background-image: url("../../../images/treeNavy.svg");
+        }
+
+        &.subtree-icon {
+            background-image: url("../../../images/subtreeNavy.svg");
+        }
+
+        &.flat-tree-icon {
+            background-image: url("../../../images/flatTreeNavy.svg");
+        }
+
+        &.loop-tree-icon {
+            background-image: url("../../../images/loopTreeNavy.svg");
+        }
+    }
+
+    #menu {
+        top: 0px;
+        right: 0px;
+        font-size: 0.9em;
+        z-index: 100000;
+        border-color: $lens-border-soft;
+        border-style: solid solid solid solid;
+        border-width: 1px;
+        color: $lens-text-hard;
+        width: 50%;
+        max-width: 1000px;
+        min-width: 400px;
+        position: fixed;
+        height: 40px;
+        background-color: $lens-soft-background;
+        margin: 9px 3px 0 0;
+
+        .menu-title {
+            position: absolute;
+            top: -12px;
+            left: 0;
+            font-size: 0.7em;
+            font-weight: 500;
+            font-variant-caps: all-small-caps;
+            opacity: 0.5;
+            width: 100%;
+            text-align: center;
+            width: calc(100% - (4 * 36px) - 57px - 25px);
+            margin: 0 0 0 57px;
+        }
+    }
+
+    h3 {
+        margin: 4px 0 0 35px;
+    }
+
+    .buttons {
+        margin: 4px 25px 0 0;
+    }
+
+    .icon,
+    .views,
+    .search,
+    .subscriptions,
+    .settings,
+    .notifications,
+    .hamburger,
+    .spread,
+    .validations,
+    .lens-min {
+        background-repeat: no-repeat;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        margin: 5px 8px;
+        float: right;
+        border: none;
+    }
+
+    .icon {
+        float: left;
+    }
+
+    .settings {
+        background-image: $svg-settings;
+        opacity: 0.5;
+    }
+
+    .settings:hover {
+        opacity: 1;
+    }
+
+    .settings:active {
+        background-image: $svg-settings-active;
+    }
+
+    .views {
+        background-image: $svg-views;
+        opacity: 0.5;
+    }
+
+    .views:hover {
+        opacity: 1;
+    }
+
+    .views:active {
+        background-image: $svg-views-active;
+    }
+
+    .search {
+        background-image: $svg-search;
+        opacity: 0.5;
+    }
+
+    .search:hover {
+        opacity: 1;
+    }
+
+    .search:active {
+        background-image: $svg-search-active;
+    }
+
+    .subscriptions {
+        background-image: url("../../../images/_database.svg");
+        opacity: 0.5;
+    }
+
+    .subscriptions:hover {
+        opacity: 1;
+    }
+
+    .subscriptions:active {
+        background-image: url("../../../images/_databaseActive.svg");
+    }
+
+    .notifications {
+        background-image: $svg-bell;
+        background-image: url("../../../images/bell2White.svg");
+        background-image: url("../../../images/bell2White2.svg");
+        opacity: 0.5;
+    }
+
+    .notifications:hover {
+        opacity: 1;
+    }
+
+    .notifications:active {
+        background-image: $svg-bell-active;
+        background-image: url("../../../images/bell2Cyan.svg");
+        background-image: url("../../../images/bell2Cyan2.svg");
+    }
+
+    .hamburger {
+        background-image: url("../../../images/hamburgerWhite.svg");
+        opacity: 0.5;
+    }
+
+    .hamburger:hover {
+        opacity: 1;
+    }
+
+    .hamburger:active {
+        background-image: url("../../../images/hamburgerCyan.svg");
+    }
+
+    .status-bar {
+        width: calc(100% - (5 * 36px) - 57px - 25px);
+        height: 40px;
+        margin: -4px 0 0 57px;
+    }
+
+    .status,
+    .alerts {
+        width: 100%;
+        height: 100%;
+        font-size: 0.7em;
+        display: table;
+        z-index: -100;
+    }
+
+    .status-tree {
+        margin: 0 auto;
+        height: 100%;
+        display: table;
+        z-index: -100;
+        vertical-align: middle;
+
+        .status-tree-row {
+            display: table-row;
+            // opacity: 0.5;
+            font-size: 0.7em;
+
+            .status-tree-cell {
+                display: table-cell;
+                vertical-align: middle;
+
+                span {
+                    opacity: 0.5;
+                }
+
+                .lens-icon,
+                .tree-icon,
+                .subtree-icon,
+                .loop-tree-icon,
+                .flat-tree-icon {
+                    background-color: transparent;
+                    background-repeat: no-repeat;
+                    float: left;
+                    border: none;
+                }
+
+                .tree-icon,
+                .subtree-icon,
+                .loop-tree-icon,
+                .flat-tree-icon {
+                    opacity: 1;
+                    margin: 4px 0 0 -40px;
+                    height: 25px;
+                    width: 25px;
+                    mix-blend-mode: screen;
+                }
+
+                .tree-icon {
+                    background-image: url("../../../images/treeBright.svg");
+                    background-image: url("../../../images/treeHighlight2.svg");
+                    background-image: url("../../../images/treeWhite.svg");
+                }
+
+                .lens-icon {
+                    background-image: url("../../../images/lens2.svg");
+                    height: 34px;
+                    width: 34px;
+                    opacity: 0.5;
+                    margin: 0 10px 0 20px;
+                }
+
+                .subtree-icon {
+                    background-image: $svg-subtree;
+                    margin: 7px 0 0 -38.5px;
+                    height: 23px;
+                    width: 23px;
+                }
+
+                .flat-tree-icon {
+                    background-image: url("../../../images/flatTree.svg");
+                    margin-top: 2px;
+                }
+
+                .loop-tree-icon {
+                    background-image: url("../../../images/loopTree.svg");
+                }
+            }
+        }
+    }
+
+    .status span {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        opacity: 0.5;
+        white-space: pre-wrap;
+    }
+
+    .alerts-box {
+        margin: 0;
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .alerts ul {
+        margin: 0;
+        padding: 0;
+        display: table;
+        margin: 0 auto;
+    }
+
+    .alert {
+        display: table-row;
+    }
+
+    .alert.info {
+        animation: notification-fade-out 2s 1;
+        animation-fill-mode: forwards;
+        animation-delay: 4s;
+    }
+
+    .cell-actions,
+    .cell-controls {
+        width: 15px;
+    }
+
+    .cell-title,
+    .cell-actions,
+    .cell-controls {
+        display: table-cell;
+    }
+
+    .cell-title span {
+        cursor: pointer;
+        opacity: 0.5;
+    }
+
+    .cell-title span:hover {
+        opacity: 1;
+    }
+
+    .cell-actions .close {
+        background-repeat: no-repeat;
+        cursor: pointer;
+        height: 10px;
+        width: 10px;
+        border: none;
+        background-image: $svg-close;
+        top: 1px;
+        position: relative;
+        display: none;
+    }
+
+    .cell-actions .row-icon {
+        height: 7px;
+        width: 7px;
+        border-radius: 5px;
+        top: -1px;
+        left: 2px;
+        position: relative;
+    }
+
+    .info .row-icon {
+        background-color: rgb(0, 255, 0);
+    }
+
+    .warning .row-icon {
+        background-color: rgb(255, 0, 0);
+    }
+
+    .alert:hover .cell-actions .row-icon {
+        display: none;
+    }
+
+    .alert:hover .cell-actions .close {
+        display: block;
+        opacity: 0.5;
+    }
+
+    .alert:hover .cell-actions .close:hover {
+        opacity: 1;
+    }
+
+    .alert:hover .cell-actions .close:active {
+        background-image: $svg-close-active;
+        opacity: 1;
+    }
+
+    @keyframes notification-fade-out {
+        from {
+            opacity: 1;
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+}

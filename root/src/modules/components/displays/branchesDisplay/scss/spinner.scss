@@ -1,0 +1,51 @@
+#branchesView {
+
+    .option-spinner {
+        position: absolute;
+        z-index: 100000;
+        top: -7px;
+        left: 1px;
+    }
+
+    .option-menu>.option-spinner {
+        top: 81px;
+        left: 1px;
+    }
+
+    .option-spinner div {
+        display: inline-block;
+        position: absolute;
+        left: 8px;
+        width: 3px;
+        background: rgb(0,255,0);
+        animation: option-spinner-key 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+    }
+
+    .option-spinner div:nth-child(1) {
+        left: 0;
+        animation-delay: -0.24s;
+    }
+
+    .option-spinner div:nth-child(2) {
+        left: 5px;
+        animation-delay: -0.12s;
+    }
+
+    .option-spinner div:nth-child(3) {
+        left: 10px;
+        animation-delay: 0;
+    }
+
+    @keyframes option-spinner-key {
+        0% {
+            top: 8px;
+            height: 32px;
+        }
+
+        50%,
+        100% {
+            top: 16px;
+            height: 15px;
+        }
+    }
+}

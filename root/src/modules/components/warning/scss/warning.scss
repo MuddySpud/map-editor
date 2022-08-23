@@ -1,0 +1,117 @@
+@import '../../init/scss/_settings';
+@import '../../init/scss/_images';
+
+
+#lensErrorView {
+
+    .lens-error-overlay {
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 500000;
+        border-radius: 0 0 2px 2px;
+        overflow-y: auto;
+        overflow-x: hidden;
+
+        &::-webkit-scrollbar-track {
+            background-color: $lens-trackbar;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: transparent;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #fff;
+        }
+
+        &:hover::-webkit-scrollbar-thumb {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid #fff;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: #fff;
+            border-color: #fff;
+        }
+
+        .lens-error-table {
+            color: white;
+            position: relative;
+            display: table;
+            width: inherit;
+            z-index: 500010;
+            margin-top: 100px;
+
+            .lens-error-row {
+                display: table-row;
+
+                .lens-error-cell {
+                    display: table-cell;
+                    text-align: center;
+
+                    .icon {
+                        border-width: 1px;
+                        border-style: solid;
+                        width: 70px;
+                        height: 70px;
+                        display: inline-block;
+                        border-radius: 40px;
+                        font-size: 60px;
+                        color: #fff;
+                        border-color: #fff;
+                        font-weight: 600;
+                    }
+
+                    h3 {
+                        font-size: 3em;
+                        letter-spacing: -0.035em;
+                        font-weight: 400;
+                    }
+
+                    span {
+                        padding: 0 40px;
+                        font-size: 0.8em;
+                        font-weight: 500;
+                        white-space: pre-wrap;
+                        line-height: 1.7em;
+                    }
+
+                    button {
+                        display: block;
+                        padding: 0.25em 1em;
+                        box-sizing: border-box;
+                        text-decoration: none;
+                        line-height: 2rem;
+                        font-weight: 400;
+                        cursor: pointer;
+                        margin: 20px 1rem;
+                        margin: 0 auto 40px auto;
+                        border-radius: 1.5rem;
+                        background-color: transparent;
+                        outline: none;
+                        border: 1px solid #fff;
+                        color: #fff;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.1);
+                        }
+
+                        &:active {
+                            background-color: rgb(0, 0, 0);
+                        }
+
+                        span {
+                            font-size: 0.85rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

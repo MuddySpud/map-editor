@@ -1,0 +1,11 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+#nodeLensView #videoUrlJsonView {
+    padding-bottom: 20px;
+    margin-top: 20px;
+
+    .discussion-input input:hover {
+        border-color: lime;
+    }
+}

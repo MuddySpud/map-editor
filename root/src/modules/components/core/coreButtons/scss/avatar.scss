@@ -1,0 +1,43 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+.avatar {
+    height: 20px;
+    float: left;
+    border: none;
+    background-color: transparent;
+    color: #fff;
+    opacity: 0.3;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin: -6px 0 0 3px;
+    width: unset;
+
+    &:hover {
+        opacity: 1;
+        background-color: transparent;
+        ;
+    }
+
+    &:active {
+        color: cyan;
+
+        .avatar-icon {
+            background-image: url("../../../../images/avatarCyan.svg");
+        }
+    }
+
+    span {
+        white-space: nowrap;
+        margin: 0 0 0 20px;
+        top: -14.5px;
+        position: relative;
+    }
+
+    .avatar-icon {
+        height: 13px;
+        width: 13px;
+        background-image: url("../../../../images/avatarWhite.svg");
+    }
+}

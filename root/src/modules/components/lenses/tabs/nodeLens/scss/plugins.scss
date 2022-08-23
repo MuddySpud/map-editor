@@ -1,0 +1,155 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#nodeLensView {
+
+    h4 {
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 0.7em;
+        font-weight: 500;
+        margin: 5px 0 2px 0;
+        padding: 0;
+    }
+
+    .options {
+        margin: 30px 0 0 0;
+
+        .option-plugin {
+            overflow: auto;
+        }
+
+        .options-images {
+            float: right;
+            border: none;
+            margin-right: 8px;
+
+            .options-images-icon,
+            .show-slash-icon {
+                background-color: transparent;
+                background-repeat: no-repeat;
+                height: 30px;
+            }
+
+            .options-images-icon {
+                cursor: pointer;
+                width: 30px;
+                margin: 5px 1px 0px 8px;
+                opacity: 0.4;
+                background-image: url("../../../../../images/imagesWhite.svg");
+            }
+
+            .show-slash-icon {
+                width: 40px;
+                margin: -25px 1px 0px 2px;
+                position: absolute;
+                opacity: 0.3;
+                background-image: url("../../../../../images/whiteSlash300tall.svg");
+            }
+
+            &:hover {
+
+                .options-images-icon {
+                    opacity: 0.9;
+                }
+
+                .show-slash-icon {
+                    opacity: 0.5;
+                }
+            }
+
+            &:active {
+                .options-images-icon {
+                    background-image: url("../../../../../images/imagesCyan.svg");
+                }
+
+                .show-slash-icon {
+                    background-image: url("../../../../../images/cyanSlash300tall.svg");
+                }
+            }
+
+        }
+    }
+
+    .discussion {
+        padding: 5px 20px 1px 20px;
+        background-color: rgba(255, 255, 255, 0.05);
+        border-radius: 2px;
+
+        .discussion-main {
+            padding-bottom: 1px
+        }
+
+        .textarea-wrapper {
+            margin-bottom: 20px;
+        }
+
+        .plugin-select {
+            .select-host {
+                .change-button {
+                    .wrapper {
+                        button {
+                            border-color: rgb(0, 100, 0);
+                            color: $lens-text-hard;
+                            background-color: rgb(0, 100, 0);
+                            padding: 7px 5px 5px 20px;
+
+                            &.expanded {
+                                border-color: $tree-border-highlight;
+                            }
+
+                            .icon {
+                                margin-top: -2px;
+                                float: right;
+                                height: 20px;
+                                width: 10px;
+                                margin: 0 10px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                .drop-down {
+                    margin: 35px 0 0 6px;
+                    background-color: rgb(0, 100, 0);
+                    font-size: 0.9em;
+                    border-color: $tree-border-highlight;
+                    border-style: none solid solid solid;
+                    z-index: 1000;
+                }
+
+                &:hover {
+                    .change-button {
+                        border-color: rgb(0, 80, 0);
+
+                        button {
+                            border-color: lime;
+                        }
+                    }
+                }
+            }
+        }
+
+        .expand-editor {
+            background-color: transparent;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            margin: 5px 1px 0px 8px;
+            float: right;
+            border: none;
+
+            background-image: url("../../../../../images/maximiseWhite.svg");
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:active {
+                background-image: url("../../../../../images/maximiseCyan.svg");
+            }
+        }
+    }
+}

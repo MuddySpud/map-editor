@@ -1,0 +1,112 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+#nodeLensView 
+
+.option-buttons{
+
+    .option-image {
+        background-image: url("../../../../../images/imageWhite.svg");
+        background-color: transparent;
+        background-repeat: no-repeat;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        float: right;
+        border: none;
+        opacity: 0.5;
+        margin: -7px 0 0 0;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &:active {
+            background-image: url("../../../../../images/imageCyan.svg");
+        }
+    }
+}
+
+.option-plugin {
+
+    .option-input input:hover {
+        border-color: lime;
+    }
+
+    .image-file {
+        font-size: 0.83rem;
+        margin: 7px 0 0 5px;
+        display: inline-block;
+    }
+
+    // .image-progress {
+    //     display: block;
+    //     height: 3px;
+    //     width: 300px;
+    //     bottom: -2px;
+    //     position: absolute;
+    // }
+
+    // .progress-line,
+    // .progress-line:before {
+    //     height: 3px;
+    //     width: 100%;
+    //     margin: 0;
+    // }
+
+    // .progress {
+    //     position: absolute;
+    //     bottom: -5px;
+    //     left: 0px;
+    //     right: 27px;
+    // }
+
+    // .progress-line {
+    //     background-color: rgba(255, 255, 255, 0.1);
+    //     display: -webkit-flex;
+    //     display: flex;
+    //     border-radius: 5px;
+    // }
+
+    // .progress-line:before {
+    //     border-radius: 5px;
+    //     background-color: $option-blue;
+    //     content: '';
+    //     -webkit-animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    //     animation: running-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    // }
+
+    // @-webkit-keyframes running-progress {
+    //     0% {
+    //         margin-left: 0px;
+    //         margin-right: 100%;
+    //     }
+
+    //     50% {
+    //         margin-left: 25%;
+    //         margin-right: 0%;
+    //     }
+
+    //     100% {
+    //         margin-left: 100%;
+    //         margin-right: 0;
+    //     }
+    // }
+
+    // @keyframes running-progress {
+    //     0% {
+    //         margin-left: 0px;
+    //         margin-right: 100%;
+    //     }
+
+    //     50% {
+    //         margin-left: 25%;
+    //         margin-right: 0%;
+    //     }
+
+    //     100% {
+    //         margin-left: 100%;
+    //         margin-right: 0;
+    //     }
+    // }
+}

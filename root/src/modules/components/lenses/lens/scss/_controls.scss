@@ -1,0 +1,119 @@
+@import '../../../init/scss/_settings';
+
+
+#lensView {
+
+    .controls-header {
+        position: absolute;
+        right: 2px;
+        top: 7.5px;
+
+        .minimise,
+        .close {
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+            float: right;
+            margin-right: 11px;
+        }
+
+        .minimise {
+            background-image: $svg-minimise;
+            opacity: 0.5;
+        }
+
+        .minimise.is-min {
+            background-image: url("../../../../images/maximiseYellow.svg");
+            opacity: 1;
+        }
+
+        .minimise:hover {
+            opacity: 1;
+        }
+
+        .minimise.is-min:hover {
+            background-image: url("../../../../images/maximise.svg");
+        }
+
+        .minimise:active {
+            background-image: $svg-minimise-active;
+        }
+
+        .minimise.is-min:active {
+            background-image: url("../../../../images/maximiseActive.svg");
+        }
+
+        .close {
+            background-image: $svg-close;
+            opacity: 0.5;
+        }
+
+        .close:hover {
+            opacity: 1;
+            background-image: url("../../../../images/closeRed2.svg");
+        }
+
+        .close:active {
+            background-image: $svg-close-active;
+            // background-image: url("../../../../images/closeActiveRed.svg");
+        }
+    }
+
+    .box-controls {
+        position: absolute;
+        right: 20px;
+        margin-top: -5.5px;
+
+        .minimise,
+        .close {
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+            float: right;
+            margin-right: 11px;
+        }
+
+        .minimise {
+            background-image: $svg-minimise;
+            opacity: 0.5;
+        }
+
+        .minimise.is-min {
+            background-image: url("../../../../images/maximiseYellow.svg");
+            opacity: 1;
+        }
+
+        .minimise:hover {
+            opacity: 1;
+        }
+
+        .minimise.is-min:hover {
+            background-image: url("../../../../images/maximise.svg");
+        }
+
+        .minimise:active {
+            background-image: $svg-minimise-active;
+        }
+
+        .minimise.is-min:active {
+            background-image: url("../../../../images/maximiseActive.svg");
+        }
+
+        .close {
+            background-image: $svg-close;
+            opacity: 0.5;
+        }
+
+        .close:hover {
+            opacity: 1;
+            background-image: url("../../../../images/closeRed2.svg");
+        }
+
+        .close:active {
+            background-image: $svg-close-active;
+            // background-image: url("../../../../images/closeActiveRed.svg");
+        }
+    }
+}

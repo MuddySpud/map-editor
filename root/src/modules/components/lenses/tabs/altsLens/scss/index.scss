@@ -1,0 +1,132 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#altsView {
+
+    .title {
+        color: $lens-text-soft;
+        display: block;
+        font-size: 0.7em;
+        font-weight: 500;
+        position: relative;
+        margin: 10px 0 20px 0;
+    }
+
+    ul {
+        margin: 0 0 10px 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        margin: 0 0 10px 0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 5px 0;
+    }
+
+    .order {
+        float: left;
+        color: $lens-text-soft;
+        font-size: 0.7em;
+        font-weight: 500;
+        padding: 9px 8px 0 9px;
+    }
+
+    .textarea-wrapper {
+        overflow: auto;
+    }
+
+    textarea {
+        border: 1px solid #bb7e02;
+        border-radius: 2px;
+        min-height: 1.88rem;
+        max-height: 800px;
+        overflow: auto;
+        padding: 5px;
+        margin: 0;
+        width: 100%;
+        height: 1rem;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        resize: none;
+        display: block;
+        background-color: #bb7e02;
+        color: $lens-text-hard;
+    }
+
+    textarea::placeholder {
+        font-style: italic;
+        color: $lens-text-soft;
+    }
+
+    .btn-delete,
+    .btn-add {
+        float: right;
+        cursor: pointer;
+        width: 19px;
+        height: 19px;
+        background-repeat: no-repeat;
+        margin: 6px 3px 0 3px;
+        opacity: 0.5;
+        background-size: 15px 15px;
+        background-position: center;
+        border: 1px solid transparent;
+    }
+
+    .btn-delete,
+    li:hover .btn-delete:active {
+        background-image: $svg-delete;
+    }
+
+    li:hover .btn-delete {
+        background-image: $svg-delete-active;
+        opacity: 1;
+    }
+
+    li:hover .btn-delete:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    li:hover .btn-delete:active {
+        background-color: $error;
+    }
+
+    .btn-add,
+    .add:hover .btn-add:active {
+        background-image: $svg-add;
+    }
+
+    .btn-add {
+        margin: 19px 15px 8px 3px;
+    }
+
+    .add:hover .btn-add {
+        background-image: $svg-add-active;
+        opacity: 1;
+    }
+
+    .add:hover .btn-add:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+        border-color: cyan;
+        border-radius: 2px;
+    }
+
+    .add:hover .btn-add:active {
+        background-color: $solution;
+    }
+
+    .add {
+        overflow: hidden;
+        margin-right: -11px;
+    }
+
+    .drag:hover {
+        background-color: $option-green-hover;
+    }
+
+}

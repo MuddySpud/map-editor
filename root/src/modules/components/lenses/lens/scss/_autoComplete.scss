@@ -1,0 +1,180 @@
+@import '../../../init/scss/_settings';
+
+
+#lensView {
+    .select-host {
+        .change-button {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 0 5px 5px;
+            outline: none;
+
+            .btn-delete,
+            .btn-delete-blocked {
+                float: right;
+                cursor: pointer;
+                width: 19px;
+                height: 19px;
+                background-repeat: no-repeat;
+                margin: 4px 3px 0 3px;
+                opacity: 0.5;
+                background-size: 15px 15px;
+                background-position: center;
+                border: 1px solid transparent;
+                border-radius: 2px;
+                background-image: $svg-delete;
+            }
+
+            &:hover .btn-delete {
+                background-image: $svg-delete-active;
+                opacity: 1;
+            }
+
+            &:hover .btn-delete:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+                border-color: rgb(0, 255, 255);
+                opacity: 1;
+                background-image: $svg-delete-active;
+            }
+
+            &:hover .btn-delete:active {
+                background-color: $error;
+                background-image: $svg-delete;
+            }
+
+            .wrapper {
+                overflow: auto;
+
+                button {
+                    outline: none;
+                    border: 1px solid #780014;
+                    border-radius: 2px;
+                    min-height: 1.88rem;
+                    max-height: 800px;
+                    overflow: auto;
+                    padding: 5px;
+                    margin: 0;
+                    width: 100%;
+                    height: 1rem;
+                    box-sizing: border-box;
+                    resize: none;
+                    display: block;
+                    color: white;
+                    background-color: #780014;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    .icon {
+                        float: left;
+                        height: 20px;
+                        width: 20px;
+                        margin: 0 20px 0 0;
+
+                        .drop-down-icon {
+                            background-color: transparent;
+                            background-repeat: no-repeat;
+                            position: relative;
+                            top: 5px;
+                            left: 5px;
+                            width: 10px;
+                            height: 10px;
+                            border: none;
+                            background-image: url("../../../../images/dropdownArrow.svg");
+                            background-image: url("../../../../images/dropdownArrow2.svg");
+                        }
+                    }
+
+                    span {
+                        float: left;
+                    }
+                }
+
+                button.expanded,
+                button:hover {
+                    border-color: rgb(255, 120, 255);
+                }
+
+                button.expanded .drop-down-icon {
+                    transform: scaleY(-1);
+                }
+            }
+        }
+
+        .drop-down {
+            position: absolute;
+            font-size: 0.7em;
+            color: $lens-text-hard;
+            list-style: none;
+            border-style: none;
+            border-width: 1px;
+            padding: 0 0 10px 0;
+            border-radius: 0 0 6px 6px;
+            margin: 0;
+            outline: none;
+            background-color: rgb(0, 0, 0);
+
+            .click-select {
+                background-color: rgba(0, 0, 0, .1);
+                border: 1px solid hsla(0, 0%, 100%, .5);
+                border-radius: 2px;
+                padding: 5px 10px;
+                font-size: .7em;
+                color: #fff;
+                font-weight: 500;
+                margin: 0 20px 0 0;
+                outline: none;
+            }
+
+            .select-table {
+                display: table;
+                width: 100%;
+            }
+
+            .select-header,
+            .select-row {
+                display: table-row;
+            }
+
+            .select-header {
+                color: $lens-text-soft;
+            }
+
+            .select-row:hover,
+            .select-row.selected:hover {
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+                cursor: pointer;
+            }
+
+            .select-cell {
+                display: table-cell;
+                padding: 5px 8px;
+
+                &:first-child {
+                    width: 30px;
+                }
+
+                &:last-child {
+                    padding-right: 20px;
+                }
+
+                .tick {
+                    height: 10px;
+                    width: 10px;
+                    margin-left: 5px;
+                    background-image: $svg-tick;
+                    display: none;
+                }
+            }
+
+            .select-row.selected {
+                background-image: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.1));
+
+                .tick {
+                    display: block;
+                }
+            }
+
+        }
+    }
+}

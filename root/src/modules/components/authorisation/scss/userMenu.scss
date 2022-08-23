@@ -1,0 +1,72 @@
+@import '../../init/scss/_settings';
+@import '../../init/scss/_images';
+
+
+#userMenuView {
+
+    #overlay {
+        position: fixed;
+        z-index: 100000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-image: transparent;
+        opacity: 0.9;
+    }
+
+    #userMenu {
+        background-color: #fff;
+        color: #000;
+        font-size: 1rem;
+        border-radius: 0 0 6px 0;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 30px 0 20px 0;
+        z-index: 100010;
+        letter-spacing: -0.035em;
+        font-weight: 400;
+
+        ul {
+            list-style: none;
+            padding: 40px 0 0 0;
+
+            li .button {
+                padding: 10px 62px;
+                display: block;
+
+                &:hover {
+                    background-color: #000;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .avatar {
+            color: #000;
+            opacity: 1;
+            margin: 3px 0 0 3px;
+
+            span {
+                font-size: 1.5rem;
+                font-weight: 500;
+                margin: 0 0 0 60px;
+                top: -19px;
+            }
+
+            .avatar-icon {
+                top: 7px;
+                left: 20px;
+                position: relative;
+                height: 25px;
+                width: 25px;
+                background-image: url("../../../images/avatarBlack.svg");
+            }
+        }
+    }
+}

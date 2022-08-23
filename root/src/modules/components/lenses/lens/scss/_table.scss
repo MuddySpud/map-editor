@@ -1,0 +1,14 @@
+@import '../../../init/scss/_settings';
+
+
+#lensView {
+
+    .odd {
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    }
+
+    .even {
+        background-image: none;
+    }
+
+}

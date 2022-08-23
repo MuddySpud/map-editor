@@ -1,0 +1,10 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#treesCoreView {
+
+    #core.filter {
+        filter: blur(2px);
+    }
+}

@@ -1,0 +1,216 @@
+@import '../../init/scss/_settings';
+@import '../../init/scss/_images';
+
+
+#headerView {
+
+    #header {
+        color: $node-green;
+    }
+
+    .tree-icon,
+    .tree-project-icon,
+    .subtree-project-icon,
+    .flat-tree-project-icon,
+    .loop-tree-project-icon,
+    .subtree-icon,
+    .flat-tree-icon,
+    .loop-tree-icon,
+    .bots-icon,
+    .trees-icon {
+        background-repeat: no-repeat;
+        border: none;
+        display: block;
+        position: relative;
+    }
+
+    .tree-project-icon,
+    .subtree-project-icon,
+    .flat-tree-project-icon,
+    .loop-tree-project-icon,
+    .flat-tree-icon,
+    .loop-tree-icon,
+    .subtree-icon,
+    .tree-icon {
+        width: 34px;
+        height: 30px;
+        top: 4px;
+        left: 5px;
+    }
+
+    .tree-project-icon {
+        background-image: url("../../../images/treeProject.svg");
+    }
+
+    .subtree-project-icon {
+        background-image: url("../../../images/subtreeProject3.svg");
+    }
+
+    .flat-tree-project-icon {
+        background-image: url("../../../images/flatTreeProject.svg");
+    }
+
+    .loop-tree-project-icon {
+        background-image: url("../../../images/loopTreeProject.svg");
+    }
+
+    .tree-icon {
+        background-image: $svg-tree;
+    }
+
+    .subtree-icon {
+        background-image: $svg-subtree;
+    }
+
+    .flat-tree-icon {
+        background-image: url("../../../images/flatTree.svg");
+    }
+
+    .loop-tree-icon {
+        background-image: url("../../../images/loopTree.svg");
+    }
+
+    .trees-icon {
+        background-image: url("../../../images/treesColour2Lightened.svg");
+        width: 55px;
+        height: 34px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .bots-icon {
+        background-image: url("../../../images/_bots2.svg");
+        width: 55px;
+        height: 34px;
+        top: 2px;
+        left: 2px;
+    }
+
+    .trees-button,
+    .tree-button,
+    .bots-button {
+        height: 40px;
+        position: relative;
+        border: 1px solid transparent;
+        border-radius: 2px;
+        display: block;
+        float: left;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .tree-button {
+        width: 41px;
+        margin: 7px 5px 0 0;
+    }
+
+    .trees-button,
+    .bots-button {
+        width: 58px;
+        margin: 5px 5px 0 0;
+    }
+
+    .tree-button:hover,
+    .trees-button:hover,
+    .bots-button:hover {
+        border-color: cyan;
+        background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    .trees-button:active,
+    .bots-button:active {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .tree,
+    .trees,
+    .bots {
+        font-size: 0.9em;
+        display: block;
+        display: inline-block;
+        outline: none;
+        margin: 15px 0 9px 0;
+    }
+
+    .tree span,
+    .trees .trees-title,
+    .bots .bots-title {
+        margin: 18px 0 5px 0;
+        display: inline-block;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 500;
+        font-size: 1em;
+    }
+
+    .trees .trees-count,
+    .bots .bots-count {
+        margin: 18px 0 5px 0;
+        display: inline-block;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 300;
+        font-size: 0.8em;
+        font-style: italic;
+        padding-left: 10px;
+    }
+
+    .tree .description-box {
+        margin: 0 0 0 46px;
+        display: table;
+
+        .description-row {
+            display: table-row;
+
+            .description {
+                color: rgba(255, 255, 255, 0.5);
+                font-weight: 400;
+                font-size: 0.7em;
+                white-space: pre-wrap;
+                display: table-cell;
+            }
+
+            .box-controls {
+                padding: 0 0 0 10px;
+                display: table-cell;
+                width: 20px;
+
+                .minimise {
+                    background-repeat: no-repeat;
+                    cursor: pointer;
+                    width: 12px;
+                    height: 12px;
+                    margin: 1.5px 0 0 0;
+                    position: absolute;
+                    background-image: $svg-minimise;
+                    opacity: 0.5;
+                    display: none;
+                }
+
+                .minimise.is-min {
+                    background-image: url("../../../images/maximiseYellow.svg");
+                    opacity: 1;
+                    margin: 1.5px 0 0 3px;
+                }
+
+                .minimise:hover {
+                    opacity: 1;
+                }
+
+                .minimise.is-min:hover {
+                    background-image: url("../../../images/maximise.svg");
+                }
+
+                .minimise:active {
+                    background-image: $svg-minimise-active;
+                }
+
+                .minimise.is-min:active {
+                    background-image: url("../../../images/maximiseActive.svg");
+                }
+            }
+        }
+
+        &:hover .description-row .box-controls .minimise {
+            display: table-cell;
+        }
+    }
+}

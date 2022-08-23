@@ -1,0 +1,40 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#optionsList {
+
+    .option-reserves {
+
+        .bookmark-navigation-content {
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 0 5px 5px;
+            margin-right: 5px;
+            ;
+            outline: none;
+        }
+
+        .bookmark-navigation {
+            margin: 20px 0 0 20px;
+        }
+
+        .input-wrapper {
+            overflow: auto;
+        }
+
+        textarea,
+        input {
+            border-color: $option-blue;
+            color: $lens-text-hard;
+            background-color: $option-blue;
+        }
+
+        .input-box textarea:hover,
+        .input-box textarea:focus,
+        .input-box input:hover,
+        .input-box input:focus {
+            border-color: $lens-border-highlight;
+        }
+    }
+}

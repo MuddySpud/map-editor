@@ -1,0 +1,208 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#notificationLens {
+
+    h3 {
+        font-size: 1em;
+        font-weight: 500;
+        margin: 0 0 20px 0;
+    }
+
+    .field select {
+        width: 115px; // so moving between tabs does not resize cause of content
+    }
+
+    .text {
+        width: 100%;
+    }
+
+    select {
+        border: 1px solid $node-green;
+        border-radius: 2px;
+        padding: 4px 5px 6px 5px;
+        color: $lens-text-blue;
+        color: $lens-text-hard;
+        background-color: $search-background;
+        border-color: $search-border;
+    }
+
+    .results {
+        overflow: visible;
+        display: block;
+        margin: 20px 0 0 0;
+    }
+
+    table {
+        font-size: 0.7em;
+        border-collapse: collapse;
+        position: unset;
+        width: 100%;
+    }
+
+    thead tr {
+        background-color: $lens-table-head;
+        color: $lens-text-hard;
+        font-weight: 500;
+    }
+
+    thead td {
+        padding: 5px 10px;
+    }
+
+    thead td.td-tick {
+        padding: 0;
+    }
+
+    tbody tr {
+        border-bottom: 1px solid $lens-table-row-divider;
+        font-weight: 500;
+    }
+
+    tbody tr.selected {
+        background-color: $lens-table-row-selected;
+    }
+
+    tbody tr:hover {
+        background-color: $lens-table-row-hovered;
+        cursor: pointer;
+        background-repeat: no-repeat;
+    }
+
+    tbody tr:active {
+        background-color: $lens-table-row-active;
+    }
+
+    tbody tr:last-child {
+        border-bottom: none;
+        font-weight: 500;
+    }
+
+    tbody td {
+        padding: 5px 10px;
+    }
+
+    tbody td.type {
+        padding: 5px 2px;
+    }
+
+    tbody td.td-open {
+        padding: 0 5px;
+        min-width: 15px;
+    }
+
+    tbody .td-open .td-tick {
+        background-color: transparent;
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    tbody .td-open .tick {
+        height: 10px;
+        width: 10px;
+        margin-left: 5px;
+        background-image: $svg-tick;
+        display: none;
+    }
+
+    tbody .selected .td-open .tick {
+        display: block;
+    }
+
+    .detail .header {
+        font-size: 0.7em;
+        width: 90px;
+        color: $lens-text-soft;
+        padding: 10px 0 5px 0;
+        font-weight: 500;
+    }
+
+    .alert {
+        font-size: 0.7em;
+        font-weight: 500;
+        display: table;
+        width: 100%;
+        margin: 30px 0 0 0;
+    }
+
+    .key,
+    .value,
+    .index {
+        display: table-cell;
+        padding: 3px 0;
+    }
+
+    .value {
+        white-space: pre-wrap;
+    }
+
+    .row {
+        display: table-row;
+        width: 100%;
+    }
+
+    .key {
+        width: 90px;
+        color: $lens-text-soft;
+    }
+
+    .index {
+        color: $lens-text-soft;
+        width: 15px;
+    }
+
+    .spot {
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
+        float: left;
+        margin: 1px 5px 0 0;
+    }
+
+    .key .spot {
+        float: right;
+        margin-right: 25px;
+    }
+
+    .warning .spot {
+        background-color: $warning;
+    }
+
+    .info .spot {
+        background-color: $info;
+    }
+
+    .error .spot {
+        background-color: $error;
+    }
+
+    .icons .notification-icon {
+        position: relative;
+        background-repeat: no-repeat;
+        width: 25px;
+        height: 25px;
+        top: 0;
+        left: 7px;
+        background-image: url("../../../../../images/bell2Highlight.svg");
+        background-image: url("../../../../../images/bell2Highlight2.svg");
+        background-image: url("../../../../../images/bell2Highlight3.svg");
+        background-image: url("../../../../../images/bell2Highlight4.svg");
+        background-image: url("../../../../../images/bell2Highlight5.svg");
+        // background-image: url("../../../../../images/bell2Highlight6.svg");
+        // background-image: url("../../../../../images/bell2Highlight7.svg");
+    }
+
+    #alertUsers {
+        min-width: 6rem;
+    }
+
+    #alertLocal {
+        min-width: 9rem;
+    }
+
+    #alertTrees {
+        min-width: 7.5rem;
+    }
+}

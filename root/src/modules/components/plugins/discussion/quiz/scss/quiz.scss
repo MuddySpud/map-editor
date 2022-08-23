@@ -1,0 +1,220 @@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#quizJsonView {
+
+    .error-summary {
+        margin: 10px 0 20px 0;
+    }
+    .title-table .title-row .title-cell .error {
+        white-space: pre-wrap;
+    }
+
+    .question,
+    .answers {
+        padding: 5px 20px 0 20px;
+        margin: 0 0 25px 0;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+    }
+
+    .question {
+        .discussion-input:first-of-type {
+            margin-top: 22px;
+        }
+
+        &:hover {
+            border-color: rgb(0, 80, 0);
+        }
+    }
+
+    .answers {
+        padding: 10px 20px;
+
+        &:hover {
+            border-color: rgb(0, 80, 0);
+        }
+
+        .answer-type-select {
+            margin-bottom: 25px;
+
+            .select-host {
+                .change-button {
+                    .wrapper {
+                        button {
+                            border-color: rgb(0, 100, 0);
+                            color: $lens-text-hard;
+                            background-color: rgb(0, 100, 0);
+                            padding: 7px 5px 5px 20px;
+
+                            &.expanded {
+                                border-color: $tree-border-highlight;
+                            }
+
+                            .icon {
+                                margin-top: -2px;
+                                float: right;
+                                height: 20px;
+                                width: 10px;
+                                margin: 0 10px 0 0;
+                            }
+                        }
+                    }
+                }
+
+                .drop-down {
+                    margin: 35px 0 0 6px;
+                    background-color: rgb(0, 100, 0);
+                    font-size: 0.9em;
+                    border-color: $tree-border-highlight;
+                    border-style: none solid solid solid;
+                }
+
+                &:hover {
+                    .change-button {
+                        border-color: rgb(0, 80, 0);
+
+                        .wrapper button {
+                            border-color: lime;
+                        }
+                    }
+                }
+            }
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 0;
+                margin: 0 0 10px 0;
+                list-style: none;
+                border: 1px solid rgba(255, 255, 255, 0.5);
+                background-color: rgba(255, 255, 255, 0.06);
+                padding: 5px 0;
+                border-radius: 2px;
+
+                &:hover {
+                    border-color: rgb(0, 80, 0);
+
+                    .btn-delete {
+                        background-image: $svg-delete-active;
+                        opacity: 1;
+
+                        &:hover {
+                            background-color: rgba(255, 255, 255, 0.2);
+                            border-color: cyan;
+                            border-radius: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .answer-box {
+            .answer-index {
+                float: left;
+                font-size: 0.7em;
+                margin: 8px 8px 0 10px;
+            }
+
+            .textarea-wrapper {
+                margin-bottom: 0px;
+            }
+
+            .answer-correct {
+                margin: 8px 0 0 0;
+                display: inline-block;
+            }
+
+            .answer-error {
+                color: yellow;
+                font-size: 0.7em;
+                font-weight: 500;
+                margin-left: 20px;
+            }
+        }
+
+        .btn-add {
+            margin: 5px 15px 7px 3px;
+        }
+    }
+
+    .rules {
+        margin: 0 20px 25px 0;
+        font-weight: 500;
+        display: table;
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 2px;
+        padding: 7px 20px;
+        outline: none;
+        box-sizing: border-box;
+
+        &:hover {
+            border-color: rgb(0, 80, 0);
+        }
+
+        .rule {
+            display: block;
+            margin: 10px 0px;
+        }
+    }
+
+    .rule,
+    .answer-correct {
+        button {
+            background-color: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.7em;
+            color: white;
+            font-weight: 500;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+
+            .yep,
+            .nope {
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 10px;
+                margin: 1px 0 0 0;
+                float: left;
+            }
+
+            .yep {
+                background-image: $svg-tick;
+            }
+
+            .nope {
+                background-image: $svg-cross;
+                height: 9px;
+                margin-top: 2px;
+            }
+
+            span {
+                margin: 0 5px 0 10px;
+            }
+
+            &:hover {
+                border-color: $lens-border-highlight;
+            }
+
+            &:active {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &.disabled,
+            &.disabled:hover,
+            &.disabled:active {
+                background-color: $lens-checkbox-background;
+                border-color: $lens-checkbox-background;
+                cursor: default;
+            }
+        }
+    }
+}

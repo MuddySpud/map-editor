@@ -1,0 +1,205 @@
+@import '../../../../../../../../node_modules/codemirror/lib/codemirror.css'; // Editor's Dependency Style
+@import '../../../../../../../../node_modules/@toast-ui/editor/dist/toastui-editor.css'; // Editor's Style@
+@import '../../../../init/scss/_settings';
+@import '../../../../init/scss/_images';
+
+
+#mdEditorView {
+
+    background-color: red;
+    #overlay {
+        position: fixed;
+        z-index: 1000000;
+        padding-top: 100px;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+        opacity: 0.9;
+    }
+
+    #lightBox {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1000010;
+        border-radius: 6px;
+        background-color: white;
+        width: 90%;
+    }
+
+    .view {
+        margin: 30px 0 100px 0;
+
+        &::-webkit-scrollbar-track {
+            background-color: $lens-trackbar;
+        }
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            // background-color: $error;
+            background-color: rgba(206, 0, 0, 0.05);
+            border-radius: 3px;
+            border: 1px solid $error;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: $error;
+        }
+    }
+
+    .controls-header {
+        position: absolute;
+        right: 2px;
+        top: 7.5px;
+
+        .minimise,
+        .close {
+            background-repeat: no-repeat;
+            cursor: pointer;
+            width: 12px;
+            height: 12px;
+            float: right;
+            margin-right: 11px;
+        }
+
+        .minimise {
+            background-image: $svg-minimise;
+            opacity: 0.5;
+        }
+
+        .minimise.is-min {
+            background-image: url("../../../../../images/maximiseYellow.svg");
+            opacity: 1;
+        }
+
+        .minimise:hover {
+            opacity: 1;
+        }
+
+        .minimise.is-min:hover {
+            background-image: url("../../../../../images/maximise.svg");
+        }
+
+        .minimise:active {
+            background-image: $svg-minimise-active;
+        }
+
+        .minimise.is-min:active {
+            background-image: url("../../../../../images/maximiseActive.svg");
+        }
+
+        .close {
+            background-image: url("../../../../../images/_closeNegative.svg");
+            opacity: 0.5;
+        }
+
+        .close:hover {
+            opacity: 1;
+        }
+
+        .close:active {
+            background-image: $svg-close-active;
+        }
+    }
+
+    .buttons {
+        text-align: center;
+        padding: 30px 0 60px 0;
+
+        &::after {
+            content: " ";
+            display: block;
+            height: 0;
+            clear: both;
+        }
+
+        button {
+            display: inline-block;
+            padding: 0.25em 1em;
+            box-sizing: border-box;
+            text-decoration: none;
+            line-height: 2rem;
+            font-weight: 400;
+            font-size: 0.85em;
+            cursor: pointer;
+            margin: 0 1rem;
+            border-radius: 1.5rem;
+            background: white;
+            outline: none;
+            width: 150px;
+            border: 1px solid rgba(200, 200, 200, 1);
+            color: black;
+        }
+
+        button.confirm:hover {
+            background-color: rgb(0, 204, 204);
+            border-color: rgb(0, 204, 204);
+            color: white;
+            font-weight: 500;
+        }
+
+        button.confirm:active {
+            background-color: rgb(0, 180, 180);
+            border-color: rgb(0, 180, 180);
+            color: white;
+        }
+
+        button.cancel:hover {
+            background-color: orange;
+            border-color: orange;
+            color: white;
+            font-weight: 500;
+        }
+
+        button.cancel:active {
+            background-color: rgb(230, 149, 0);
+            border-color: rgb(230, 149, 0);
+            color: white;
+        }
+
+        .yep {
+            background-image: $svg-tick-negative;
+        }
+
+        .nope {
+            background-image: $svg-cross-negative;
+        }
+
+        button:hover .yep,
+        button:hover .nope {
+            opacity: 0.5;
+        }
+
+        button:hover .yep {
+            background-image: $svg-tick;
+        }
+
+        button:hover .nope {
+            background-image: $svg-cross;
+        }
+
+        .yep,
+        .nope {
+            background-repeat: no-repeat;
+            width: 15px;
+            height: 15px;
+            margin: 8px 0 0 2px;
+            float: left;
+            position: absolute;
+            opacity: 0.2;
+        }
+
+        .nope {
+            height: 12px;
+            margin-top: 10px;
+        }
+    }
+}

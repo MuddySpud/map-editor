@@ -1,0 +1,88 @@
+@import '../../../init/scss/_settings';
+
+
+#lensView {
+
+    .button-press {
+        margin: 20px 0 0 0;
+
+        button {
+            background-color: rgba(0, 255, 255, 0.3);
+            border-radius: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 2px;
+            padding: 10px 20px;
+            font-size: 0.7em;
+            color: white;
+            font-weight: 500;
+            margin: 0 20px 15px 0;
+            outline: none;
+            cursor: pointer;
+
+            &:hover {
+                border-color: $lens-border-highlight;
+                background-color: rgba(0, 255, 255, 0.5);
+            }
+
+            &:active {
+                background-color: rgb(0, 255, 255);
+            }
+        }
+    }
+
+    .button-type {
+        margin: 0 0 0 -2px;
+
+        button {
+            background-color: $lens-checkbox-background;
+            border: 1px solid $lens-border-soft;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.7em;
+            color: $lens-text-hard;
+            font-weight: 500;
+            margin: 0;
+            outline: none;
+            cursor: pointer;
+
+            .yep,
+            .nope {
+                background-repeat: no-repeat;
+                width: 10px;
+                height: 10px;
+                margin: 1px 0 0 0;
+                float: left;
+            }
+
+            .yep {
+                background-image: $svg-tick;
+            }
+
+            .nope {
+                background-image: $svg-cross;
+                height: 9px;
+                margin-top: 2px;
+            }
+
+            span {
+                margin: 0 5px 0 10px;
+            }
+
+            &:hover {
+                border-color: $lens-border-highlight;
+            }
+
+            &:active {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+
+            &.disabled,
+            &.disabled:hover,
+            &.disabled:active {
+                background-color: $lens-checkbox-background;
+                border-color: $lens-checkbox-background;
+                cursor: default;
+            }
+        }
+    }
+}

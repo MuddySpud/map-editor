@@ -1,0 +1,404 @@
+@import '../../../init/scss/_settings';
+@import '../../../init/scss/_images';
+
+
+#projectView {
+
+    .loading {
+        margin: 60px 0 0 100px;
+
+        .tree-spinner {
+            position: relative;
+            margin: -60px 0 0 0;
+        }
+    }
+
+    #treeProject {
+        margin: 50px 10px;
+        width: calc(50% - 14px);
+        padding: 0 8px 0 0;
+        box-sizing: border-box;
+    }
+
+    .root-project {
+        margin: 40px 0 0 40px;
+
+        &>.project-table>.project-row>.project-buttons {
+            width: 160px;
+        }
+    }
+
+    .project-children {
+        margin: 0 0 0 58px;
+    }
+
+    .project-table,
+    .subtree-table {
+        display: table;
+        width: 100%;
+        margin: 0 0 0 -25px;
+    }
+
+    .project-table {
+        margin: 0 0 0 -36px;
+    }
+
+    .project-row {
+        color: $lens-text-soft;
+        color: rgb(0, 230, 255);
+        font-size: 0.8em;
+        font-weight: 400;
+        margin: 0 10px;
+        padding: 0 10px;
+        display: table-row;
+    }
+
+    .project-cell,
+    .expand-cell {
+        width: 30px;
+        display: table-cell;
+        padding: 0;
+    }
+
+    .cell-panel {
+        display: table-cell;
+        padding: 0;
+        width: 90px;
+
+        .project-cell {
+            margin: 0 5px;
+        }
+    }
+
+    .icon {
+        width: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .narrow,
+    .narrow>.icon {
+        width: 22px;
+    }
+
+    .icon.button,
+    .icon.badge {
+        border: 1px solid transparent;
+        border-radius: 2px;
+        padding: 2px 0px 5px 0px;
+        margin: 0 2px;
+    }
+
+    .icon.badge {
+        margin: 0 2px 0 0;
+    }
+
+    .icon.button.on,
+    .icon.button.on-quiet {
+        cursor: pointer;
+    }
+
+    .icon.button.on-quiet {
+        margin: 0;
+    }
+
+    .project-buttons {
+        display: table-cell;
+        padding: 0;
+        width: 100px;
+
+        .icon {
+            margin: 0 10px 0 0;
+        }
+
+        .project-cell:last-child .icon {
+            margin: 0 2px 0 0;
+        }
+    }
+
+    .project-row:hover {
+
+        .icon.button {
+
+            &.on,
+            &.on-quiet {
+                border-color: rgb(0, 255, 255);
+                // background-color: rgba(0, 0, 0, 0.1);
+
+                &:hover {
+                    background-color: rgba(0, 0, 0, 0.3);
+                }
+
+                &:active {
+                    background-color: rgba(255,255,255,0.3);
+                }
+            }
+
+            &.disabled {
+
+                &.on,
+                &.on-quiet {
+                    border-color: transparent;
+                    background-color: transparent;
+                }
+            }
+        }
+    }
+
+    .name {
+        display: table-cell;
+        padding: 5px 5px 5px 10px;
+        vertical-align: middle;
+    }
+
+    .tree-project-icon,
+    .subtree-project-icon,
+    .flat-tree-project-icon,
+    .loop-tree-project-icon,
+    .create-icon,
+    .bot-icon,
+    .info-icon,
+    .tree-icon,
+    .flat-tree-icon,
+    .loop-tree-icon,
+    .edit-icon,
+    .delete-icon,
+    .subtree-icon,
+    .branches-icon,
+    .tick-icon {
+        height: 20px;
+        width: 20px;
+        margin-left: 5px;
+        display: none;
+        background-repeat: no-repeat;
+        position: relative;
+        opacity: 0.5;
+    }
+
+    .tree-project-icon,
+    .subtree-project-icon,
+    .flat-tree-project-icon,
+    .loop-tree-project-icon,
+    .tick-icon,
+    .create-icon {
+        display: block;
+        opacity: 1;
+    }
+
+    .tree-project-icon {
+        background-image: url("../../../../images/treeProject.svg");
+    }
+
+    .subtree-project-icon {
+        background-image: url("../../../../images/subtreeProject3.svg");
+    }
+
+    .flat-tree-project-icon {
+        background-image: url("../../../../images/flatTreeProject.svg");
+    }
+
+    .loop-tree-project-icon {
+        background-image: url("../../../../images/loopTreeProject.svg");
+    }
+
+    .tree-icon {
+        background-image: $svg-tree;
+        background-image: url("../../../../images/treeWhite.svg");
+    }
+
+    .create-icon {
+        background-image: url("../../../../images/plusOrangeCircle2Ghost.svg");
+        left: -23px;
+        top: 0;
+        height: 16px;
+        width: 16px;
+        border-radius: 1.5px 0 0 0;
+    }
+
+    .flat-tree-icon {
+        background-image: url("../../../../images/flatTreeGhost.svg");
+    }
+
+    .loop-tree-icon {
+        background-image: url("../../../../images/loopTreeWhite.svg");
+    }
+
+    .icon .tick-icon {
+        background-image: $svg-tick;
+        width: 13px;
+        height: 13px;
+        top: -8px;
+        left: 3px;
+    }
+
+    .subtree-icon {
+        background-image: $svg-subtree;
+        background-image: url("../../../../images/subtreeGhost.svg");
+        top: 3px;
+    }
+
+    .bot-icon {
+        background-image: $svg-bot;
+        background-image: url("../../../../images/botGhost3.svg");
+    }
+
+    .info-icon {
+        background-image: $svg-info;
+        top: -4px;
+        margin: 0;
+    }
+
+    .tick-icon {
+        background-image: $svg-info;
+    }
+
+    .branches-icon {
+        background-image: url("../../../../images/branches2.svg");
+        width: 25px;
+        left: -3px;
+        top: 2px;
+    }
+
+    .project-row.selected,
+    .project-row:hover {
+
+        .name {
+            color: $lens-text-hard;
+            background-color: rgba(0, 0, 0, 0.2);
+            background-blend-mode: multiply;
+        }
+
+        .bot-icon,
+        .tree-icon,
+        .flat-tree-icon,
+        .loop-tree-icon,
+        .subtree-icon,
+        .branches-icon,
+        .tick-icon {
+            opacity: 1;
+        }
+
+        .tree-icon {
+            background-image: $svg-tree;
+        }
+
+        .flat-tree-icon {
+            background-image: url("../../../../images/flatTree.svg");
+        }
+
+        .loop-tree-icon {
+            background-image: url("../../../../images/loopTree.svg");
+        }
+
+        .icon:hover {
+
+            .edit-icon {
+                background-image: url("../../../../images/pencil6.svg");
+                opacity: 1;
+            }
+
+            .delete-icon {
+                background-image: url("../../../../images/dustbin.svg");
+                opacity: 1;
+            }
+        }
+
+        .subtree-icon {
+            background-image: $svg-subtree;
+        }
+
+        .bot-icon {
+            background-image: $svg-bot;
+        }
+
+        .branches-icon {
+            background-image: url("../../../../images/branchesGhost.svg");
+            background-image: url("../../../../images/branches2.svg");
+        }
+    }
+
+    .project-row.selected .name {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .project-expand {
+        width: 15px;
+        height: 15px;
+        float: left;
+        background-repeat: no-repeat;
+        border-radius: 0;
+        background-image: none;
+        cursor: pointer;
+        display: block;
+        background-color: transparent;
+        position: relative;
+        top: -8.5px;
+        left: 9.5px;
+    }
+
+    .project-row.expanded .project-expand {
+        background-image: none;
+    }
+
+    .project-row:hover .project-expand {
+        background-image: $svg-expand-down;
+        display: block;
+    }
+
+    .project-row.expanded:hover .project-expand {
+        background-image: $svg-expand-up;
+    }
+
+    .project-row:hover .project-expand:active {
+        background-image: $svg-expand-down-active;
+    }
+
+    .project-row.expanded:hover .project-expand:active {
+        background-image: $svg-expand-up-active;
+    }
+
+    .project-row:hover {
+        // background-color: rgba(0, 0, 0, 0.3);
+
+        .edit-icon {
+            // background-image: url("../../../../images/pencilHighlight8.svg");
+            background-image: url("../../../../images/pencilGhost.svg");
+            top: 2px;
+        }
+
+        .delete-icon {
+            background-image: url("../../../../images/dustbinGhost.svg");
+            top: 1px;
+        }
+
+        .icon.disabled:hover .delete-icon {
+            background-image: url("../../../../images/dustbinGhost.svg");
+            cursor: default;
+            opacity: 0.5;
+        }
+
+        .info-icon {
+            opacity: 1;
+        }
+
+        .bot-icon,
+        .info-icon,
+        .tree-icon,
+        .flat-tree-icon,
+        .loop-tree-icon,
+        .edit-icon,
+        .delete-icon,
+        .subtree-icon,
+        .branches-icon {
+            display: block;
+        }
+
+        .info-icon:hover {
+            background-image: $svg-info-active;
+        }
+    }
+
+    .subtree-project>.project-table>.project-row>.tick {
+        margin-left: 50px;
+    }
+}

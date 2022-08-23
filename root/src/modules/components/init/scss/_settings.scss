@@ -1,0 +1,114 @@
+// fonts
+@import url("https://fonts.googleapis.com/css?family=Montserrat: 200,200i,300,300i,400,400i,500,500i,600,600i");
+$fonts: Montserrat,
+Quicksand,
+Open Sans,
+arial,
+helvetica,
+sans-serif;
+
+// gradients
+$background-gradient: linear-gradient(45deg, rgb(10, 10, 16), rgb(0, 125, 162), rgb(3, 58, 113));
+$background-gradient-bright: linear-gradient(45deg, rgb(44, 44, 107), rgb(5, 195, 253), rgb(3, 76, 150));
+$background-gradient-faded: linear-gradient(45deg, rgba(10, 10, 16, 0.8), rgba(0, 125, 162, 0.8), rgba(3, 58, 113, 0.8));
+
+// colors
+$option-blue: #3432a0;
+$option-dark-blue: #1e1d5d;
+$option-grey: rgb(80, 80, 80);
+$option-drag-background: #eaebf5;
+$option-background-border: #ced0de;
+$option-background-grey: rgb(235, 235, 235);
+$option-blue-hover: rgba(52, 60, 160, 0.2);
+
+$search-background: #902490;
+$search-border: #902490;
+
+$discussion-border-highlight: rgb(0, 255, 0);
+$way-border-highlight: rgb(0, 255, 0);
+
+$tree-background: #9c3b03;
+$tree-border: #9c3b03;
+$tree-border-highlight: rgb(255, 255, 0);
+
+$lens-text-hard: white;
+$lens-text-soft: rgba(255, 255, 255, 0.5);
+$lens-text-blue: #016b95;
+$lens-checkbox-background: rgba(0, 0, 0, 0.1);
+$lens-soft-background: rgba(255, 255, 255, 0.1);
+$lens-border-soft: rgba(255, 255, 255, 0.5);
+$lens-border-highlight: rgb(0, 255, 255);
+$lens-text-disabled: rgba(255, 255, 255, 0.2);
+$lens-outline-disabled: rgba(255, 255, 255, 0.2);
+$lens-control-hover: rgba(255, 255, 255, 0.2);
+$lens-background-disabled: transparent;
+$lens-trackbar: transparent;
+$lens-table-head: rgba(0, 255, 255, 0.3);
+$lens-table-row-hovered: rgba(0, 0, 0, 0.3);
+$lens-table-row-selected: rgba(0, 0, 0, 0.15);
+$lens-table-row-active: rgba(0, 0, 0, 0.5);
+$lens-table-row-divider: rgba(255, 255, 255, 0.1);
+$bot-table-background: rgba(0, 0, 0, 0.1);
+$box-border: rgba(255, 255, 255, 0.2);
+
+$tags-table-head: #902490;
+$history-table-head: rgb(0, 150, 0);
+
+$tree-selected-node-background: rgba(245, 245, 245, 0.05);
+$tree-selected-option-background: rgba(200, 255, 255, 0.05);
+$tree-option-background: white;
+$tree-option-actions-background: #007ba1;
+$tree-line: rgba(255, 255, 255, 0.5);
+$tree-line-highlight: rgb(0, 255, 0);
+
+$header-title: rgba(0, 255, 0, 0.65);
+
+$node-green: green;
+$node-dark-green: darkgreen;
+$node-background-green: #eff5ef;
+$way-blue: rgb(0, 100, 0);
+$way-dark-blue: #4e4613;
+$way-background-blue: #f8eda3;
+$option-green-hover: rgb(200, 230, 200);
+$background-white: white;
+$error: rgb(206, 0, 0);
+$error-dark: rgb(255, 255, 0);
+$warning: rgb(255, 100, 0);
+$warning-text: rgb(255, 255, 140);
+$info: rgb(22, 185, 5);
+$solution: rgb(22, 185, 5);
+$socket: #7b0303;
+$plug: rgb(47, 187, 255);
+$link: rgb(47, 187, 255);
+$root: #7b3c02;
+$border-basic: rgb(220, 220, 220);
+$scrollbar: rgb(100, 100, 100);
+$scrollbar-hover: rgb(0, 0, 175);
+$text-basic: rgb(50, 50, 50);
+$overlay: rgba(50, 50, 50, 0.85);
+
+$discussion-border: rgb(255, 175, 70);
+$discussion-background: rgb(60, 60, 60);
+$discussion-hover: #000;
+
+$notification-background: white;
+$notification-shadow: rgba(100, 100, 100, 0.1);
+
+$select-orange: rgb(255, 100, 0);
+$select-orange-alpha: rgba(255, 100, 0, 0.8);
+$select-cyan-alpha: rgba(0, 255, 240, 0.8);
+$select-yellow-alpha: rgba(148, 199, 7, 0.8);
+
+$action-menu-background: black;
+$action-menu-colour: white;
+$action-menu-item-background: transparent;
+$action-menu-item-hover-background: rgb(100, 100, 100);
+
+$global-branch-target: rgb(255, 100, 0);
+$global-branch-target-dark: rgb(255, 50, 0);
+$global-branch-target-dark-hover: rgb(180, 30, 0);
+$global-branch-option: rgb(0, 255, 240);
+$global-branch-option-dark: rgb(0, 180, 255);
+$global-branch-limit: rgb(217, 255, 0);
+$global-branch-limit-dark: rgb(160, 172, 2);
+$main-trackbar: transparent;
